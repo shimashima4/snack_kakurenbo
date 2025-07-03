@@ -1,0 +1,4 @@
+.DS.Store
+
+.vscode/*
+!.vscode/extensions.json
