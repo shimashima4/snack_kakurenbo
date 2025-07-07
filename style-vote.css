@@ -1,0 +1,82 @@
+.dagashiPage__head img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.snackList {
+  display: flex;
+  flex-direction: column;
+  gap: 80px;
+  padding-top: 100px;
+}
+.snackList__row {
+  border-bottom: 30px #99725c solid;
+}
+.snackList__inner {
+  margin: 0 auto;
+  width: 90%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+
+.onSnack {
+  position: relative;
+  text-align: center;
+  width: 20%;
+}
+.onSnack p {
+  position: absolute;
+  text-align: center;
+  width: 100%;
+  padding: 12px;
+  background-color: #e6ded6;
+  font-weight: bold;
+}
+.onSnack img {
+  vertical-align: bottom;
+}
+
+.ranking {
+  background-color: #2a2a2a;
+  margin-top: 195px;
+  padding-top: 150px;
+}
+.ranking__title {
+  width: 60%;
+  margin: 0 auto;
+}
+
+.rankContent {
+  padding-top: 200px;
+}
+
+.topThree {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.topThreeBar {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  text-align: center;
+  width: 30%;
+  text-align: center;
+  height: 320px;
+}
+.topThreeBar p {
+  width: 100%;
+  text-align: center;
+  color: white;
+}
+.topThreeBar img {
+  display: block;
+  width: 60%;
+  margin: 0 auto;
+  margin-top: auto;
+}
+/*# sourceMappingURL=style-vote.css.map */
