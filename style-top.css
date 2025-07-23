@@ -28,29 +28,78 @@ img {
 .top {
     width: 100%;
     display: block;
-    /* position:fixed; */
+    /* position: absolute; */
 
+    text-align: center;
     transition: transform 0.3s, opacity 0.5s;
     opacity: 1;
     pointer-events: auto;
 }
 
+.top__content img{
+    width:100%;
+}
+
 .top__inner {
     width: 100%;
-    max-width: 390px;
+    /* max-width: 390px; */
     margin-left: auto;
     margin-right: auto;
 }
 
+.top__pic{
+    position: relative;
+    top: -890px;
+    left: 0;
+    width: fit-content;
+    height: 40%;
+    z-index: 1;
+}
+
+.top__pic .top__logo img{
+    position:relative;
+    top: -110px;
+    left: 0;
+    width: 50%;
+    z-index: 1;
+}
+
+.top__object{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-end;
+
+    position: relative;
+    top: -530px;
+    left: 5px
+}
+
+.top__object img{
+    width:40%;
+}
+
+.top__object .bike{
+    width: 60%;
+}
+
+.top__object .bike img{
+    width: 100%;
+    height: auto;
+
+    margin-left: 60px;;
+}
 .activity {
+    margin-top: -490px;
+
     width: 100%;
     background: #B0C921;
     position: relative;
 
     text-align: center;
-    /* opacity: 0;
-  transition: opacity 0.5s;
-  pointer-events: none; */
+    opacity: 0;
+    transition: opacity 0.5s;
+    pointer-events: none;
     overflow: hidden;
     z-index: -11;
 }
