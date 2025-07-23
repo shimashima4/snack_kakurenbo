@@ -1,4 +1,4 @@
-// import "/style.css";
+// import "/style-top.css";
 
 // import * as THREE from "three";
 // import { OrbitControls } from "three/examples/jsm/controls/OrbitControls.js";
@@ -8,32 +8,38 @@
 
 gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
 
-const top = document.querySelector('.top__pic');
-const nextSection = document.querySelector('.activity');
+const top = document.querySelector('.top__content');
+const nextSection = document.querySelector('#activity');
 
-window.addEventListener('load', () => {
-  gsap.timeline({
-    scrollTrigger: {
-      trigger: ".top",
-      start: "top top",
-      end: "+=150%",
-      scrub: true,
-      markers: true
-    }
-  })
+window.addEventListener("load", () => {
+  gsap
+    .timeline({
+      scrollTrigger: {
+        trigger: ".top",
+        start: "top top",
+        end: "bottom top+=200",
+        pin: true,
+        pinSpacing: true,
+        pinType: "transform",
+        scrub: true,
+        markers: false
+      }
+    })
     .to(top, {
       scale: 2,
       z: 250,
       transformOrigin: "center center",
-      opacity: 0,
-      pointerEvents: "none",
-      ease: "power2.out"
-    }, 0)
-    .to(nextSection, {
-      scale: 1.4,
-      transformOrigin: "center center",
-      opacity: 1,
-      pointerEvents: "auto",
-      ease: "power2.out"
-    },  "<");
+      opacity:0,
+      ease: "power1.inOut"
+    })
+    .to(
+      nextSection,
+      {
+        scale: 1.4,
+        transformOrigin: "center top",
+        opacity: 1,
+        ease: "power1.inOut"
+      },
+      "<"
+    );
 });
