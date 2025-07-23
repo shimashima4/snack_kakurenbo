@@ -17,17 +17,18 @@ window.addEventListener("load", () => {
       scrollTrigger: {
         trigger: ".top",
         start: "top top",
-        end: "bottom top+=200",
-        pin: true,
-        pinSpacing: true,
-        pinType: "transform",
-        scrub: true,
+        end: "bottom top+=100",
+        scrub: 1,
         markers: false
-      }
+      },
+      opacity: 0,
+      y: -80,
+      ease: "power1.inOut"
     })
     .to(top, {
       scale: 2,
       z: 250,
+      pin: true,
       transformOrigin: "center center",
       opacity:0,
       ease: "power1.inOut"
