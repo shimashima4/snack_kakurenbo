@@ -79,6 +79,7 @@ body {
   background: url(./images/0_src/gizagiza.png);
 }
 .ranking__title {
+  width: 100%;
   width: 60%;
   margin: 0 auto;
   margin-bottom: 30px;
