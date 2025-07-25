@@ -36,8 +36,16 @@ img {
     pointer-events: auto;
 }
 
-.top__content img{
+.top__content .top__wall{
     width:100%;
+    height: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.top__content .top__wall img{
+    width: 100%;
+    height: auto;
 }
 
 .top__inner {
@@ -97,8 +105,8 @@ img {
     position: relative;
 
     text-align: center;
-    opacity: 0;
-    transition: opacity 0.5s;
+    /* opacity: 0;
+    transition: opacity 0.5s; */
     pointer-events: none;
     overflow: hidden;
     z-index: -11;
