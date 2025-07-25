@@ -1,6 +1,7 @@
 .header {
   display: block;
   position: fixed;
+  font-weight: bold;
   z-index: 50;
   width: 150px;
   margin: 20px 0 0 20px;
@@ -43,7 +44,7 @@
   display: block;
   position: relative;
   -o-object-fit: cover;
-  object-fit: cover;
+     object-fit: cover;
 }
 
 .info__logo img {
@@ -165,7 +166,7 @@
 }
 .textArea__link img {
   -o-object-fit: contain;
-  object-fit: contain;
+     object-fit: contain;
   width: 30px;
   margin-left: 5px;
 }
@@ -215,9 +216,9 @@
   margin-top: 20px;
   text-decoration: underline;
   -webkit-text-decoration-style: #b7a78a;
-  text-decoration-style: #b7a78a;
+          text-decoration-style: #b7a78a;
   -webkit-text-decoration-style: dashed;
-  text-decoration-style: dashed;
+          text-decoration-style: dashed;
   font-size: 0.875em;
   letter-spacing: 0.1em;
   line-height: 2.6;

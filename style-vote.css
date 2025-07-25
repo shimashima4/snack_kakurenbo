@@ -19,7 +19,7 @@ body {
 .dagashiPage__head img {
   width: 100%;
   -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 
 .snackList {
@@ -63,7 +63,8 @@ body {
   margin-top: 195px;
   padding-top: 20%;
   padding-bottom: 95px;
-  background-image: url("./images/0_src/light_left.png"), url("./images/0_src/light_right.png");
+  background-image: url("./images/0_src/light_left.png"),
+    url("./images/0_src/light_right.png");
   background-position: left 50%, right 50%;
   background-size: 70%;
   background-repeat: no-repeat;
