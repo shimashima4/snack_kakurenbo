@@ -1,0 +1,461 @@
+html,
+body {
+    height: 100%;
+    margin: 0;
+    font-family: "hiragino-kaku-gothic-pron", sans-serif;
+    font-size: 15px;
+    line-height: 1.5;
+    letter-spacing: 0.002em;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    vertical-align: bottom;
+}
+
+.canvas {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+
+/* .header {
+
+} */
+
+.top {
+    width: 100%;
+    display: block;
+    /* position: absolute; */
+
+    text-align: center;
+    transition: transform 0.3s, opacity 0.5s;
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.top__content img{
+    width:100%;
+}
+
+.top__inner {
+    width: 100%;
+    /* max-width: 390px; */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.top__pic{
+    position: relative;
+    top: -890px;
+    left: 0;
+    width: fit-content;
+    height: 40%;
+    z-index: 1;
+}
+
+.top__pic .top__logo img{
+    position:relative;
+    top: -110px;
+    left: 0;
+    width: 50%;
+    z-index: 1;
+}
+
+.top__object{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-end;
+
+    position: relative;
+    top: -530px;
+    left: 5px
+}
+
+.top__object img{
+    width:40%;
+}
+
+.top__object .bike{
+    width: 60%;
+}
+
+.top__object .bike img{
+    width: 100%;
+    height: auto;
+
+    margin-left: 60px;;
+}
+.activity {
+    margin-top: -490px;
+
+    width: 100%;
+    background: #B0C921;
+    position: relative;
+
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.5s;
+    pointer-events: none;
+    overflow: hidden;
+    z-index: -11;
+}
+
+.activity__inner {
+    width: 100%;
+    max-width: 390px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.activity:before {
+    content: '';
+    position: absolute;
+    top: -80px;
+    left: 0;
+    width: 50%;
+    height: 50%;
+    background: url(/images/0_src/megaphone_top.png) no-repeat center center/ contain;
+    z-index: -1;
+}
+
+/* .activity.visible {
+  opacity: 1;
+  pointer-events: auto;
+} */
+
+.activity__list {
+    margin-top: 140px;
+    z-index: 1;
+}
+
+.activity__list img {
+    width: 100%;
+    max-width: 390px;
+    height: auto;
+}
+
+.activity__list img.activity__heading {
+    transform: rotate(5deg);
+}
+
+.activity__title {
+    margin-top: 50px;
+    padding: 100px 50px 7px 75px;
+    text-align: center;
+    background: url(/images/0_src/report_heading-bg.png) no-repeat center center/ cover;
+}
+
+.activity__item {
+    margin-top: -20px;
+    background: #fff;
+}
+
+.about {
+    padding: 150px 0 240px;
+
+    background:
+        url(/images/0_src/candy.png) no-repeat top 95px left -12px/ 90px,
+        url(/images/0_src/umaibo.png) no-repeat top 155px right -35px/ 90px,
+        url(/images/0_src/ramune_bin.png) no-repeat top 352px left -40px/ 90px,
+        url(/images/0_src/fruits.png) no-repeat top 480px right -35px/ 100px,
+        url(/images/0_src/yogurt.png) no-repeat top 680px left -35px/ 100px,
+        url(/images/0_src/loose.png) no-repeat bottom 100px right -30px/ 100px;
+}
+
+.about__inner {
+    width: 100%;
+    max-width: 390px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.about__title {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: first baseline;
+}
+
+.about__text {
+    margin: 0 auto;
+    display: block;
+    width: 300px;
+    font-size: 15px;
+    line-height: 1.7;
+
+    text-align: left;
+}
+
+.about__text span {
+    font-size: 12px;
+    line-height: 1.5;
+}
+
+.about__text a {
+    color: #000;
+    text-decoration: none;
+
+    cursor: pointer;
+}
+
+.loader {
+    margin: 36px 0;
+    text-align: center;
+}
+
+.thought {
+    background: url(/images/0_src/feeling_bg.png) no-repeat center center/ cover;
+}
+
+.thought__inner {
+    width: 100%;
+    max-width: 390px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.thought__pic {
+    padding: 90px 0 35px;
+    text-align: center;
+}
+
+.thought__pic img {
+    border: 5px solid #AA977B;
+    border-radius: 40px;
+}
+
+.thought__text {
+    padding: 0 20px 50px;
+    text-align: center;
+    font-family: "hiragino-kaku-gothic-pron", sans-serif;
+    font-size: 14px;
+    color: #4E3D3D;
+}
+
+.thought__phrase {
+    padding-bottom: 30px;
+}
+
+.thought__phrase p {
+    width: fit-content;
+    margin: 0 auto 15px;
+    padding-bottom: 5px;
+    border-bottom: 1px solid #AE9D85;
+}
+
+.thought__phrase:last-child {
+    padding-bottom: 300px;
+}
+
+.member__inner {
+    width: 90%;
+    max-width: 390px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.member__header {
+    margin-left: 30px;
+}
+
+.member__header img {
+    width: 70%;
+    aspect-ratio: 4/3;
+    object-fit: contain;
+}
+
+.member__thoughts {
+    margin-top: -150px;
+}
+
+.member__thoughts-pic {
+    position: relative;
+    z-index: -1;
+}
+
+.member__thoughts img {
+    width: 100%;
+    aspect-ratio: 4/3;
+    object-fit: contain;
+}
+
+.member__list {
+    margin-top: -145px;
+    padding-bottom: 145px;
+    background: #FEF6DF;
+}
+
+.member__item {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.member__item:nth-child(2n) {
+    flex-direction: row-reverse;
+}
+
+.card {
+    padding: 5px 0;
+}
+
+.card__pic {
+    width: 25%;
+    transform: rotateY(-180deg);
+}
+
+.card__text {
+    width: 60%;
+    padding: 25px;
+    background: url(/images/0_src/messege-bg.png) no-repeat center center/ contain;
+}
+
+.member__item:nth-child(2n) .card__text {
+    background: url(/images/0_src/message-bg2.png) no-repeat center center/ contain;
+}
+
+
+.card__text p {
+    font-size: 12px;
+    font-weight: bold;
+    line-height: 1.5;
+    text-align: center;
+    color: #4E3D3D;
+}
+
+.member__pic {
+    margin-top: -55px;
+}
+
+.access {
+    margin-top: -75px;
+
+    position: relative;
+    background: #E0EEF1;
+}
+
+.access:before {
+    content: '';
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 100%;
+    background:
+        url(/images/0_src/ivy_top.png) no-repeat top -10px left/150px,
+        url(/images/0_src/ivy_bottom.png) no-repeat bottom 130px right/ 155px,
+        url(/images/0_src/tree_top.png) no-repeat top 75px right/ 160px,
+        url(/images/0_src/tree_bottom.png) no-repeat bottom 110px left/ 180px;
+}
+
+.access__inner {
+    width: 90%;
+    max-width: 390px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.access__header {
+    width: 65%;
+
+    margin-bottom: 50px;
+}
+
+.access__description {
+    border: 4px solid #DBC176;
+    border-radius: 8px;
+
+    overflow: hidden;
+}
+
+.access__map {
+    width: 100%;
+    aspect-ratio: 4/3;
+    object-fit: contain;
+
+    overflow: hidden;
+}
+
+.access__info {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: flex-start;
+
+    padding: 35px 0 30px;
+    background: url(/images/0_src/access_bg-wood.png) no-repeat center center/ cover;
+}
+
+.access__info img {
+    width: 40%;
+
+    margin-top: 20px;
+}
+
+.access__info-text {
+    width: 45%;
+    color: #fff;
+}
+
+.address__title {
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.address__detail {
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.address__detail p {
+    margin: 0px;
+}
+
+.address__btn {
+    margin-top: 20px;
+    padding: 10px 15px;
+
+    text-align: center;
+    background: #009340;
+
+    border-radius: 20px;
+    border: 1px solid #fff;
+
+    cursor: pointer;
+}
+
+.address__btn a {
+    font-size: 12px;
+    font-weight: bold;
+    color: #fff;
+    text-decoration: none;
+}
+
+.bike-boy {
+    width: 60%;
+    transform: rotateY(180deg);
+    margin: 0 145px 0 85px;
+}
+
+.footer {
+    padding: 25px 80px;
+}
+
+.footer__inner {
+    width: 90%;
+    max-width: 390px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.footer__text {
+    font-size: 22px;
+    font-weight: normal;
+    line-height: 1.5;
+    text-align: center;
+    color: #000;
+}
