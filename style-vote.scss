@@ -1,0 +1,170 @@
+@charset 'utf-8';
+$breakpoints: (
+  "mobile": "(320px >= width)"
+) !default;
+
+@mixin m-query($breakpoint) {
+  @media #{map-get($breakpoints, $breakpoint)} {
+    @content;
+  }
+}
+
+body {
+  background-color: #f6edde;
+}
+
+.header {
+  display: block;
+  position: fixed;
+  z-index: 50;
+  width: 150px;
+  margin: 20px 0 0 20px;
+}
+
+.dagashiPage {
+  display: block;
+  max-width: 400px;
+  margin: 0 auto;
+  background-color: white;
+  &__head img {
+    width: 100%;
+    object-fit: cover;
+  }
+}
+
+.snackList {
+  display: flex;
+  flex-direction: column;
+  gap: 80px;
+  padding-top: 100px;
+  &__row {
+    border-bottom: 30px #99725c solid;
+  }
+  &__inner {
+    margin: 0 auto;
+    width: 90%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-end;
+    justify-content: space-between;
+  }
+}
+
+.onSnack {
+  position: relative;
+  text-align: center;
+  width: 20%;
+  & p {
+    position: absolute;
+    text-align: center;
+    width: 100%;
+    padding: 12px;
+    background-color: #e6ded6;
+    font-weight: bold;
+  }
+  & img {
+    vertical-align: bottom;
+  }
+}
+
+.ranking {
+  position: relative;
+  background-color: #2a2a2a;
+  margin-top: 195px;
+  padding-top: 20%;
+  padding-bottom: 95px;
+  background-image: url("./images/0_src/light_left.png"), url("./images/0_src/light_right.png");
+  background-position:
+    left 50%,
+    right 50%;
+  background-size: 70%;
+  background-repeat: no-repeat;
+
+  &::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: -48px;
+    transform: scale(-100%);
+    left: center;
+    max-width: 400px;
+    background: url(./images/0_src/gizagiza.png);
+  }
+
+  &__title {
+    width: 100%;
+    width: 60%;
+    margin: 0 auto;
+    margin-bottom: 30px;
+    @include m-query(mobile) {
+      top: 0;
+      margin-bottom: -20px;
+    }
+  }
+}
+
+.topThree {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  font-family: "Dela Gothic One", sans-serif;
+  font-size: (16em/16);
+}
+
+.topThreeBar {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  text-align: center;
+  width: 30%;
+  height: 380px;
+  max-height: 380px;
+  text-align: center;
+
+  & p {
+    width: 100%;
+    text-align: center;
+    color: white;
+    padding-top: 10px;
+  }
+  & img {
+    display: block;
+    width: 60%;
+    margin: 0 auto;
+    margin-top: auto;
+  }
+  &--second p {
+    height: 85px;
+    background-color: #989898;
+  }
+  &--first p {
+    height: 136px;
+    background-color: #f2c246;
+  }
+  &--third p {
+    height: 55px;
+    background-color: #916a64;
+  }
+}
+
+.vote {
+  padding-bottom: 130px;
+  &__title {
+    margin: 105px auto 0;
+    max-width: 350px;
+  }
+  &__button {
+    display: block;
+    padding: 10px 50px;
+    border: 3px #6c6c6c solid;
+    font-size: (22em/16);
+    margin: 35px auto 0;
+    font-weight: bold;
+    text-align: center;
+  }
+}
+
+.voteBox {
+  display: block;
+  margin: 58px auto 0;
+}
