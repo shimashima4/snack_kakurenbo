@@ -8,7 +8,6 @@
 
 gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
 
-<<<<<<< HEAD
 const top = document.querySelector('.top__content');
 const nextSection = document.querySelector('#activity');
 
@@ -43,8 +42,9 @@ window.addEventListener("load", () => {
         ease: "power1.inOut"
       },
       "<"
-    );
-=======
+  );
+});
+
 window.addEventListener("load", () => {
   // Zoom-in and fade-out .top section from center
   gsap.timeline({
@@ -103,5 +103,4 @@ window.addEventListener("load", () => {
       }
     });
   });
->>>>>>> 48711481479142e100c554ebbc6a8ad1b9d55e78
 });
