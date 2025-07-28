@@ -119,7 +119,7 @@ img {
     left: 0;
     width: 50%;
     height: 50%;
-    background: url(/images/0_src/megaphone_top.png) no-repeat center center/ contain;
+    background: url(./images/0_src/megaphone_top.png) no-repeat center center/ contain;
     z-index: -1;
 }
 
@@ -147,7 +147,7 @@ img {
     margin-top: 50px;
     padding: 100px 50px 7px 75px;
     text-align: center;
-    background: url(/images/0_src/report_heading-bg.png) no-repeat center center/ cover;
+    background: url(./images/0_src/report_heading-bg.png) no-repeat center center/ cover;
 }
 
 .activity__item {
@@ -218,12 +218,12 @@ img {
     padding: 150px 0 240px;
 
     background:
-        url(/images/0_src/candy.png) no-repeat top 95px left -12px/ 90px,
-        url(/images/0_src/umaibo.png) no-repeat top 155px right -35px/ 90px,
-        url(/images/0_src/ramune_bin.png) no-repeat top 352px left -40px/ 90px,
-        url(/images/0_src/fruits.png) no-repeat top 480px right -35px/ 100px,
-        url(/images/0_src/yogurt.png) no-repeat top 680px left -35px/ 100px,
-        url(/images/0_src/loose.png) no-repeat bottom 100px right -30px/ 100px;
+        url(./images/0_src/candy.png) no-repeat top 95px left -12px/ 90px,
+        url(./images/0_src/umaibo.png) no-repeat top 155px right -35px/ 90px,
+        url(./images/0_src/ramune_bin.png) no-repeat top 352px left -40px/ 90px,
+        url(./images/0_src/fruits.png) no-repeat top 480px right -35px/ 100px,
+        url(./images/0_src/yogurt.png) no-repeat top 680px left -35px/ 100px,
+        url(./images/0_src/loose.png) no-repeat bottom 100px right -30px/ 100px;
 }
 
 .about__inner {
@@ -271,7 +271,7 @@ img {
 }
 
 .thought {
-    background: url(/images/0_src/feeling_bg.png) no-repeat center center/ cover;
+    background: url(./images/0_src/feeling_bg.png) no-repeat center center/ cover;
 }
 
 .thought__inner {
@@ -375,11 +375,11 @@ img {
 .card__text {
     width: 60%;
     padding: 25px;
-    background: url(/images/0_src/messege-bg.png) no-repeat center center/ contain;
+    background: url(./images/0_src/messege-bg.png) no-repeat center center/ contain;
 }
 
 .member__item:nth-child(2n) .card__text {
-    background: url(/images/0_src/message-bg2.png) no-repeat center center/ contain;
+    background: url(./images/0_src/message-bg2.png) no-repeat center center/ contain;
 }
 
 
@@ -409,10 +409,10 @@ img {
     width: 100%;
     height: 100%;
     background:
-        url(/images/0_src/ivy_top.png) no-repeat top -10px left/150px,
-        url(/images/0_src/ivy_bottom.png) no-repeat bottom 130px right/ 155px,
-        url(/images/0_src/tree_top.png) no-repeat top 75px right/ 160px,
-        url(/images/0_src/tree_bottom.png) no-repeat bottom 110px left/ 180px;
+        url(./images/0_src/ivy_top.png) no-repeat top -10px left/150px,
+        url(./images/0_src/ivy_bottom.png) no-repeat bottom 130px right/ 155px,
+        url(./images/0_src/tree_top.png) no-repeat top 75px right/ 160px,
+        url(./images/0_src/tree_bottom.png) no-repeat bottom 110px left/ 180px;
 }
 
 .access__inner {
@@ -450,7 +450,7 @@ img {
     align-items: flex-start;
 
     padding: 35px 0 30px;
-    background: url(/images/0_src/access_bg-wood.png) no-repeat center center/ cover;
+    background: url(./images/0_src/access_bg-wood.png) no-repeat center center/ cover;
 }
 
 .access__info img {
