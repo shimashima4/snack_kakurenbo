@@ -1,28 +1,83 @@
 .header {
+  display: none;
+  margin-left: 0;
+  position: relative;
+}
+.header__wrap {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+@media (813px <= width) {
+  .header__wrap {
+    display: block;
+    position: fixed;
+    top: 140px;
+    right: calc(50vw - 380px);
+    z-index: 0;
+  }
+}
+.header__wrap a {
   display: block;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+@media (813px <= width) {
+  .header {
+    display: block;
+  }
+}
+
+.linktag {
+  width: 234px;
+  display: block;
+  margin-bottom: 20px;
+  transition: 0.3s ease all;
+}
+.linktag--first {
+  transform: rotateZ(-4deg);
+}
+.linktag--second {
+  transform: rotateZ(3deg);
+}
+.linktag--third {
+  transform: rotateZ(-3deg);
+}
+.linktag--fourth {
+  transform: rotateZ(2deg);
+}
+.linktag--fifth {
+  transform: rotateZ(5deg);
+}
+.linktag:hover {
+  transition: 0.3s ease all;
+  transform: translateX(20px);
+}
+
+body::before {
+  content: "";
+  width: 100vw;
+  height: 100vh;
   position: fixed;
-  z-index: 0;
-  z-index: 50;
-  width: 150px;
-  margin: 20px 0 0 20px;
+  display: block;
+  background: url(./images/0_src/background_snack.png) bottom center/cover;
+  opacity: 0.6;
 }
 
 .info-body {
   margin: 0;
+  display: grid;
+  grid-template-columns: 1fr 340px 1fr;
   background-color: #f6edde;
+  width: 100%;
 }
-@media (600 <= width) {
-  .info-body {
-    background-image: url("./images/0_src/background_snack_left.png"), url("./images/0_src/background_snack_right.png");
-    background-size: 100% 100%;
-  }
-}
-
 .info {
+  position: relative;
+  z-index: 30;
   margin-top: 50px;
   padding-bottom: 240px;
   max-width: 340px;
-  margin: 50px auto 0;
   background: url("./images/0_src/megaphone_bottom.png") bottom right no-repeat;
   background-size: 200px;
   background-color: #b0c921;
@@ -131,6 +186,10 @@
   background-color: #b0c921;
   border-radius: 10px;
   padding: 15px;
+}
+.articles__photo img {
+  display: block;
+  height: 150px;
 }
 .articles__text {
   padding: 15px;
@@ -248,5 +307,27 @@
   content: url(./images/0_src/a_arrow.png);
   display: block;
   margin: -10px auto 0;
+}
+
+.info-space {
+  display: block;
+  position: relative;
+}
+.info-space__logo {
+  display: none;
+  position: fixed;
+}
+@media (813px <= width) {
+  .info-space__logo {
+    max-width: 350px;
+    margin-top: 60px;
+    display: block;
+    margin-left: auto;
+    left: calc(50vw - 500px);
+  }
+}
+.info-space__logo a {
+  display: block;
+  max-width: 150px;
 }
 /*# sourceMappingURL=style-info.css.map */
