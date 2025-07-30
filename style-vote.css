@@ -2,12 +2,30 @@ body {
   background-color: #f6edde;
 }
 
-.header {
-  display: block;
+body::before {
+  content: "";
+  width: 100vw;
+  height: 100vh;
   position: fixed;
-  z-index: 50;
-  width: 150px;
-  margin: 20px 0 0 20px;
+  display: block;
+  background: url(./images/0_src/background_snack.png) bottom center/cover;
+  opacity: 0.6;
+}
+
+.dagashiPage {
+  position: relative;
+  z-index: 80;
+}
+
+.header__wrap {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+@media (813px <= width) {
+  .header__wrap {
+    right: calc(50vw - 410px);
+  }
 }
 
 .dagashiPage {
@@ -140,6 +158,10 @@ body {
 .vote__title {
   margin: 105px auto 0;
   max-width: 350px;
+}
+.vote__box {
+  display: block;
+  margin: 30px auto 0;
 }
 .vote__button {
   display: block;
