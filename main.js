@@ -12,95 +12,83 @@ const top = document.querySelector('.top');
 const nextSection = document.querySelector('#activity');
 
 window.addEventListener("load", () => {
-  gsap
-    .timeline({
-      scrollTrigger: {
-        trigger: ".top",
-        start: "top top",
-        end: "bottom top+=100",
-        pin: true,
-        scrub: 1,
-        markers: false
+  const nextSection = document.querySelector('#activity');
+  const topSection = document.querySelector('.top');
+
+  gsap.timeline({
+    scrollTrigger: {
+      trigger: ".top",
+      start: "top top",
+      end: "bottom top+=250",
+      pin: true,
+      scrub: 1.2,
+      anticipatePin: 1,
+      markers: false,
+      onLeave: () => {
+        nextSection.classList.add("active", "animating");
+        gsap.fromTo("#activity",
+          {
+            opacity: 0,
+            scale: 0.2,
+            xPercent: -50,
+            yPercent: -50,
+            left: "50%",
+            top: "50%",
+            position: "fixed",
+            zIndex: 10
+          },
+          {
+            opacity: 1,
+            scale: 1,
+            xPercent: 0,
+            yPercent: 0,
+            left: "0%",
+            top: "0%",
+            duration: 0.8,
+            ease: "power3.out",
+            onComplete: () => {
+              nextSection.classList.remove("animating");
+              gsap.set("#activity", {
+                position: "relative",
+                zIndex: "",
+                left: "",
+                top: "",
+                transform: "none",
+                clearProps: "z, scale, opacity, transform, left, top, xPercent, yPercent"
+              });
+            }
+          }
+        );
+        gsap.set(topSection, { display: "none" });
       },
-      opacity: 0,
-      y: -80,
-      ease: "power1.inOut"
-    })
-    .to(top, {
-      scale: 2,
-      z: 250,
-      transformOrigin: "center center",
-      opacity:0,
-      ease: "power1.inOut"
-    })
-    .to(
-      nextSection,
-      {
-        scale: 1.4,
-        transformOrigin: "center top",
-        opacity: 1,
-        ease: "power1.inOut"
-      },
-      "<"
-  );
+      onEnterBack: () => {
+        nextSection.classList.remove("active");
+        nextSection.classList.add("animating");
+        gsap.set("#activity", {
+          opacity: 0,
+          scale: 0.2,
+          position: "fixed",
+          left: "50%",
+          top: "50%",
+          xPercent: -50,
+          yPercent: -50,
+          zIndex: 10,
+          transform: "translate(-50%, -50%) scale(0.2)"
+        });
+        gsap.set(topSection, { display: "block" });
+      }
+    }
+  });
+
+  gsap.to(".top", {
+    scrollTrigger: {
+      trigger: ".top",
+      start: "top top",
+      end: "bottom top+=250",
+      scrub: 1.2
+    },
+    opacity: 0,
+    scale: 1.1,
+    ease: "power3.inOut"
+  });
 });
-
-// window.addEventListener("load", () => {
-//   // Zoom-in and fade-out .top section from center
-//   gsap.timeline({
-//     scrollTrigger: {
-//       trigger: "#top",
-//       start: "top top",
-//       end: "bottom top+=100",
-//       pin: true,
-//       scrub: 1.5,
-//       anticipatePin: 1,
-//       // markers: true,
-//     }
-//   })
-//   .to(".top", {
-//     opacity: 0,
-//     scale: 1.25,
-//     y: 0,
-//     ease: "power1.inOut"
-//   });
-
-//   // .activity section zooms in from center and fades in
-//   gsap.timeline({
-//     scrollTrigger: {
-//       trigger: "#activity",
-//       start: "top center",
-//       end: "bottom top+=100",
-//       pin: true,
-//       scrub: 1.5,
-//       anticipatePin: 1,
-//       // markers: true,
-//     }
-//   })
-//   .fromTo(".activity__inner", {
-//     opacity: 0,
-//     scale: 0.8,
-//     y: 0
-//   }, {
-//     opacity: 1,
-//     scale: 1,
-//     y: 0,
-//     ease: "power2.inOut"
-//   });
-
-//   // Sticky effect for other sections
-//   const stickySections = [".about", ".thought", ".member", ".access"];
-//   stickySections.forEach(selector => {
-//     gsap.timeline({
-//       scrollTrigger: {
-//         trigger: selector,
-//         start: "top center",
-//         end: "bottom top+=100",
-//         pin: true,
-//         scrub: 1.2,
-//         anticipatePin: 1,
-//         // markers: true,
-//       }
-//     });
-//   });
-// });
