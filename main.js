@@ -26,44 +26,47 @@ window.addEventListener("load", () => {
       markers: false,
       onLeave: () => {
         nextSection.classList.add("active", "animating");
-        gsap.fromTo("#activity",
-          {
-            opacity: 0,
-            scale: 0.2,
-            xPercent: -50,
-            yPercent: -50,
-            left: "50%",
-            top: "50%",
-            position: "fixed",
-            zIndex: 10
-          },
-          {
-            opacity: 1,
-            scale: 1,
-            xPercent: 0,
-            yPercent: 0,
-            left: "0%",
-            top: "0%",
-            duration: 0.8,
-            ease: "power3.out",
-            onComplete: () => {
-              nextSection.classList.remove("animating");
-              gsap.set("#activity", {
-                position: "relative",
-                zIndex: "",
-                left: "",
-                top: "",
-                transform: "none",
-                clearProps: "z, scale, opacity, transform, left, top, xPercent, yPercent"
-              });
-            }
+        // Set initial state for activity
+        gsap.set("#activity", {
+          opacity: 0,
+          scale: 0.2,
+          position: "fixed",
+          left: "50%",
+          top: "50%",
+          xPercent: -50,
+          yPercent: -50,
+          zIndex: 10
+        });
+        // Animate activity in
+        gsap.to("#activity", {
+          opacity: 1,
+          scale: 1,
+          xPercent: 0,
+          yPercent: 0,
+          left: "0%",
+          top: "0%",
+          duration: 0.8,
+          ease: "power3.out",
+          onComplete: () => {
+            nextSection.classList.remove("animating");
+            // Return activity to normal flow
+            gsap.set("#activity", {
+              position: "relative",
+              zIndex: "",
+              left: "",
+              top: "",
+              transform: "none",
+              clearProps: "z, scale, opacity, transform, left, top, xPercent, yPercent"
+            });
+            // Now hide .top section
+            gsap.set(topSection, { display: "none" });
           }
-        );
-        gsap.set(topSection, { display: "none" });
+        });
       },
       onEnterBack: () => {
         nextSection.classList.remove("active");
         nextSection.classList.add("animating");
+        // Reset activity to initial state
         gsap.set("#activity", {
           opacity: 0,
           scale: 0.2,
@@ -75,6 +78,7 @@ window.addEventListener("load", () => {
           zIndex: 10,
           transform: "translate(-50%, -50%) scale(0.2)"
         });
+        // Show .top section again
         gsap.set(topSection, { display: "block" });
       }
     }

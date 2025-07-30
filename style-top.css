@@ -102,10 +102,15 @@ img {
     transform: none;
     text-align: center;
     visibility: visible;
-    opacity: 1;
+    opacity: 0;
     pointer-events: auto;
-    transition: none;
+    transition: opacity 0.8s;
     z-index: 9;
+}
+
+.activity.active,
+.activity.animating {
+    opacity: 1;
 }
 
 .activity.animating {
