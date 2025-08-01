@@ -15,6 +15,7 @@
       href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&display=swap"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="./menustyle.css" />
   </head>
   <body class="info-body">
     <section class="info-space section">
@@ -25,6 +26,19 @@
       </div>
     </section>
     <section class="info">
+      <nav class="nav nav--info">
+        <div class="nav__inner">
+          <ul class="nav__ul">
+            <li><a href="./info.html">かくれんぼニュース</a></li>
+            <li><a href="./index.html#about">かくれんぼについて</a></li>
+            <li><a href="./index.html#feeling">れいちゃんの想ひ</a></li>
+            <li><a href="./ranking.html">おすすめの駄菓子屋</a></li>
+            <li><a href="./memory.html">思い出・感想</a></li>
+          </ul>
+        </div>
+        <p class="nav__menu"><a href="#">MENU</a></p>
+        <p></p>
+      </nav>
       <h1 class="info__logo info__logo">
         <img src="./images/0_src/report_heading.gif" alt="活動報告" />
       </h1>
@@ -55,7 +69,7 @@
       <!-- <a href="#"
         ><img src="./images/0_src/logo_black.png" alt="スナックかくれんぼ"
       /></a> -->
-      <div class="header__wrap">
+      <div class="header__wrap infoHeader">
         <a href="./info.html">
           <img
             src="./images/0_src/report_btn-tag.gif"
@@ -77,14 +91,14 @@
             class="linktag linktag--third"
           />
         </a>
-        <a href="">
+        <a href="./ranking.html">
           <img
             src="./images/0_src/nice_btn-tag.gif"
             alt="おすすめの駄菓子"
             class="linktag linktag--fourth"
           />
         </a>
-        <a href="">
+        <a href="./memory.html">
           <img
             src="./images/0_src/memory_btn-tag.gif"
             alt="思い出・感想"
@@ -93,5 +107,6 @@
         </a>
       </div>
     </section>
+    <script src="./menu.js"></script>
   </body>
 </html>

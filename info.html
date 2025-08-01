@@ -1,40 +1,5 @@
 <!DOCTYPE html>
 <html lang="ja">
-<!-- <<<<<<< HEAD
-
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Document</title>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/the-new-css-reset/css/reset.min.css" />
-  <link rel="stylesheet" href="style-info.css" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&display=swap" rel="stylesheet" />
-</head>
-
-<body class="info-body">
-  <section class="info">
-    <h1 class="info__logo">
-      <img src="./images/0_src/report_heading.gif" alt="活動報告" />
-    </h1>
-    <div class="info__content">
-      <div class="info__inner">
-        <div class="pagenation">
-          <a class="left-arrow">
-            < </a>
-              <a class="pagetab pagetab--active">1</a><a class="pagetab">2</a><a class="pagetab">3</a><a
-                class="pagetab">4</a><a class="pagetab">5</a>
-              <a class="right-arrow">></a>
-        </div>
-        <div class="info__article articles">
-          <article class="articles__article">
-            <span class="timetag"> 2025.01.01 </span>
-            <span class="pin"><img src="" alt="" /></span>
-            <div class="articles__flex">
-              <div class="articles__photo">
-                <img src="./images/0_src/activity_pic.webp" alt="activity-pic" />
-======= -->
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -44,12 +9,14 @@
       href="https://cdn.jsdelivr.net/npm/the-new-css-reset/css/reset.min.css"
     />
     <link rel="stylesheet" href="style-info.css" />
+    <link rel="stylesheet" href="style-vote.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&display=swap"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="./menustyle.css">
   </head>
   <body class="info-body">
         <section class="info-space section">
@@ -58,6 +25,19 @@
       </div>
     </section>
     <section class="info">
+        <nav class="nav nav--info">
+        <div class="nav__inner">
+          <ul class="nav__ul">
+            <li><a href="./info.html">かくれんぼニュース</a></li>
+            <li><a href="./index.html#about">かくれんぼについて</a></li>
+            <li><a href="./index.html#feeling">れいちゃんの想ひ</a></li>
+            <li><a href="./ranking.html">おすすめの駄菓子屋</a></li>
+            <li><a href="./memory.html">思い出・感想</a></li>
+          </ul>
+        </div>
+        <p class="nav__menu"><a href="#">MENU</a></p>
+        <p></p>
+      </nav>
       <h1 class="info__logo">
         <img src="./images/0_src/report_heading.gif" alt="活動報告" />
       </h1>
@@ -107,7 +87,7 @@
       <!-- <a href="#"
         ><img src="./images/0_src/logo_black.png" alt="スナックかくれんぼ"
       /></a> -->
-      <div class="header__wrap">
+      <div class="header__wrap infoHeader">
         <a href="./info.html">
           <img
             src="./images/0_src/report_btn-tag.gif"
@@ -136,7 +116,7 @@
             class="linktag linktag--fourth"
           />
         </a>
-        <a href="./ranking.html">
+        <a href="./memory.html">
           <img
             src="./images/0_src/memory_btn-tag.gif"
             alt="思い出・感想"
@@ -145,6 +125,7 @@
         </a>
       </div>
     </section>
+    <script src="./menu.js"></script>
 </body>
 
 </html>
