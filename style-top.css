@@ -198,9 +198,9 @@ img {
     transform: translateZ(0);
 }
 
-    .activity__list {
-        margin-top: 140px;
-        padding-top: 120px;
+.activity__list {
+    margin-top: 140px;
+    padding-top: 120px;
     z-index: 1;
     transform: translateZ(0);
 }
