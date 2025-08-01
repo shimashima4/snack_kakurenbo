@@ -68,21 +68,29 @@
                 </div>
             </div>
         </section>
-
-        <section class="activity" id="activity">
-            <div class="activity__inner">
-                <div class="activity__list">
-                    <h2 class="activity__title">
-                        <img src="./images/0_src/report_heading-ruby.gif" alt="activity-logo" />
-                    </h2>
-
-                    <div class="activity__item post">
-                        <article class="post__item card">
-                            <span class="timetag"> 2025.01.01 </span>
-                            <span class="pin"><img src="" alt="" /></span>
-                            <div class="card__flex">
-                                <div class="card__photo">
-                                    <img src="./images/0_src/activity_pic.webp" alt="activity-pic" />
+        <section class="activity" id="activity" data-scroll-section>
+            <h2 class="activity__title">
+                <img src="./images/0_src/report_heading-ruby.gif" alt="activity-logo" />
+            </h2>
+            <div class="activity__content">
+                <div class="activity__inner">
+                    <div class="activity__list">
+                        <div class="activity__item articles">
+                            <article class="articles__article">
+                                <span class="timetag"> 2025.01.01 </span>
+                                <span class="pin"><img src="" alt="" /></span>
+                                <div class="articles__flex">
+                                    <div class="articles__photo">
+                                        <img src="./images/0_src/activity_pic.webp" alt="activity-pic" />
+                                    </div>
+                                    <div class="articles__text textArea">
+                                        <p class="textArea__tags">タグ</p>
+                                        <h2 class="textArea__title">あけましておめでとう</h2>
+                                        <a class="textArea__link" href="#">
+                                            <span>記事を読む</span>
+                                            <img src="./images/0_src/ramune_bin.png" alt="" />
+                                        </a>
+                                    </div>
                                 </div>
                                 <div class="card__text textArea">
                                     <p class="textArea__tags">タグ</p>
@@ -92,7 +100,7 @@
                                         <img src="./images/0_src/ramune_bin.png" alt="" />
                                     </a>
                                 </div>
-                            </div>
+                        </div>
                         </article>
                     </div>
                     <p class="activity__text">もっと活動を見る→</p>
@@ -236,7 +244,6 @@
                     </div>
                     <div class="access__info">
                         <img src="./images/0_src/logo_white.png" alt="logo-white" />
-
                         <div class="access__info-text address">
                             <div class="address__title">
                                 <p>内田橋商店街のどこか</p>
@@ -269,18 +276,19 @@
         </div>
     </footer>
     <script type="module" src="./main.js"></script>
+
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
 
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
     <!-- ScrollSmoother requires ScrollTrigger -->
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollSmoother.min.js"></script>
     <script type="importmap">
-      {
-        "imports": {
-          "three": "https://cdn.jsdelivr.net/npm/three@0.177.0/build/three.js",
-          "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.177.0/examples/jsm/"
+        {
+            "imports": {
+                "three": "https://cdn.jsdelivr.net/npm/three@0.177.0/build/three.js",
+                "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.177.0/examples/jsm/"
+            }
         }
-      }
     </script>
 </body>
 
