@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/the-new-css-reset/css/reset.min.css"
+    />
+    <link rel="stylesheet" href="./menustyle.css" />
+  </head>
+  <body>
+    <nav class="nav">
+      <div class="nav__inner">
+        <ul class="nav__ul">
+          <li><a href="./info.html">かくれんぼニュース</a></li>
+          <li><a href="./index.html#about">かくれんぼについて</a></li>
+          <li><a href="./index.html#feeling">れいちゃんの想ひ</a></li>
+          <li><a href="./ranking.html">おすすめの駄菓子屋</a></li>
+          <li><a href="./memory.html">思い出・感想</a></li>
+        </ul>
+      </div>
+      <p class="nav__menu"><a href="#">MENU</a></p>
+      <p></p>
+    </nav>
+    <script defer>
+      const navButton = document.querySelector(".nav");
+      const navMenu = document.querySelector(".nav__menu a");
+      const navInner = document.querySelector(".nav__inner");
+      let f = 0;
+
+      console.log(navButton);
+      navButton.addEventListener("click", () => {
+        console.log("aaaa");
+        f = (f + 1) % 2;
+        if (f == 1) {
+          navButton.style.borderRadius = "40px 40px 20px 20px";
+          navMenu.textContent = "CLOSE";
+          navInner.classList.add("active");
+          navButton.classList.add("nav__click");
+        } else {
+          navMenu.textContent = "MENU";
+          navInner.classList.remove("active");
+          navButton.style.borderRadius = "20px";
+        }
+      });
+    </script>
+  </body>
+</html>
