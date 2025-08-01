@@ -1,0 +1,14 @@
+body::after {
+  content: "";
+  display: block;
+  position: fixed;
+  z-index: 0;
+  width: 100vw;
+  height: 100vh;
+  background: url("./images/0_src/background_snack.png") left bottom/ cover;
+  background-repeat: no-repeat;
+  opacity: 0.6;
+  z-index: 0;
+  bottom: 0;
+  left: 0;
+}

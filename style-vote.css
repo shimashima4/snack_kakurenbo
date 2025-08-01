@@ -2,42 +2,33 @@ body {
   background-color: #f6edde;
 }
 
-body::before {
-  content: "";
-  width: 100vw;
-  height: 100vh;
-  position: fixed;
-  display: block;
-  background: url(./images/0_src/background_snack.png) bottom center/cover;
-  opacity: 0.6;
-}
-
 .dagashiPage {
   position: relative;
   z-index: 80;
 }
 
-.header__wrap {
+/* .header__wrap {
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
-}
-@media (813px <= width) {
+} */
+/* @media (813px <= width) {
   .header__wrap {
-    right: calc(50vw - 410px);
+    /* right: calc(50vw - 400px); */
+/*
   }
-}
+} */
 
 .dagashiPage {
   display: block;
-  max-width: 400px;
+  /* max-width: 400px; */
   margin: 0 auto;
-  background-color: white;
+  background-color: rgb(249, 246, 242);
 }
 .dagashiPage__head img {
   width: 100%;
   -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 
 .snackList {
@@ -81,7 +72,8 @@ body::before {
   margin-top: 195px;
   padding-top: 20%;
   padding-bottom: 95px;
-  background-image: url("./images/0_src/light_left.png"), url("./images/0_src/light_right.png");
+  background-image: url("./images/0_src/light_left.png"),
+    url("./images/0_src/light_right.png");
   background-position: left 50%, right 50%;
   background-size: 70%;
   background-repeat: no-repeat;
@@ -178,3 +170,36 @@ body::before {
   margin: 58px auto 0;
 }
 /*# sourceMappingURL=style-vote.css.map */
+
+.memory {
+  background-color: white;
+  text-align: center;
+}
+
+.omoide-body {
+  position: relative;
+  z-index: 100;
+}
+
+.omoide-body__paragraph {
+  margin-top: 60px;
+}
+
+.memoryCorner h2 {
+  margin-top: 130px;
+  margin-bottom: 20px;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.ranking::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: -48px;
+  transform: scale(-100%);
+  left: center;
+  max-width: 400px;
+  z-index: 0;
+  background: url(./images/0_src/gizagiza.png);
+}
