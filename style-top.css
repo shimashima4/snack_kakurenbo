@@ -1,6 +1,7 @@
-html{
+html {
     scroll-behavior: smooth;
 }
+
 body {
     height: 100%;
     margin: 0;
@@ -31,9 +32,9 @@ img {
 }
 
 .main {
-    max-width:390px;
+    max-width: 390px;
     width: 100%;
-    margin:0 auto;
+    margin: 0 auto;
 
     position: relative;
     min-height: 100vh;
@@ -81,8 +82,8 @@ img {
     backface-visibility: hidden;
 }
 
-.top__content{
-    position:relative;
+.top__content {
+    position: relative;
 
 }
 
@@ -93,7 +94,7 @@ img {
     margin-right: auto;
 }
 
-.top__pic{
+.top__pic {
     position: relative;
     top: -775px;
     left: 0;
@@ -102,15 +103,15 @@ img {
     z-index: 1;
 }
 
-.top__pic .top__logo img{
-    position:relative;
+.top__pic .top__logo img {
+    position: relative;
     top: -110px;
     left: 0;
     width: 50%;
     z-index: 1;
 }
 
-.top__object{
+.top__object {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -121,18 +122,19 @@ img {
     left: 5px
 }
 
-.top__object img{
-    width:40%;
+.top__object img {
+    width: 40%;
 }
 
-.top__object .bike{
+.top__object .bike {
     width: 60%;
 }
 
-.top__object .bike img{
+.top__object .bike img {
     width: 100%;
 
-    margin-left: 60px;;
+    margin-left: 60px;
+    ;
 }
 
 .activity {
@@ -174,7 +176,6 @@ img {
 
 .activity__inner {
     width: 90%;
-    max-width: 390px;
     margin-left: auto;
     margin-right: auto;
     position: relative;
@@ -183,7 +184,7 @@ img {
 .activity:before {
     content: '';
     position: absolute;
-    top: -80px;
+    top: -330px;
     left: 0;
     width: 50%;
     height: 50%;
@@ -209,10 +210,9 @@ img {
     width: 100%;
     max-width: 390px;
     height: auto;
-}
 
-.activity__list img.activity__heading {
-    transform: rotate(5deg);
+    position: relative;
+    z-index: 5;
 }
 
 .activity__title {
@@ -232,69 +232,78 @@ img {
     background: #fff;
 }
 
-    .card {
-        position: relative;
-        width: fit-content;
-        margin: -0.5px auto 0;
-    }
+.articles__article {
+    position: relative;
+    width: fit-content;
+    margin: -0.5px auto 0;
+}
 
-    .card__flex {
-        display: block;
-        background-color: #fcf5d6;
-        border-radius: 0 0 15px 15px;
-        max-width: 400px;
-    }
+.articles__flex {
+    display: block;
+    background-color: #fcf5d6;
+    border-radius: 0 0 15px 15px;
+    max-width: 336px;
+}
 
-    .card__photo {
-        background-color: #b0c921;
-        border-radius: 10px;
-        padding: 15px;
-    }
+.articles__photo {
+    background-color: #b0c921;
+    border-radius: 10px;
+    padding: 15px;
+}
 
-    .card__text {
-        padding: 15px;
-        color: #2f2f2f;
-        font-weight: bold;
-    }
+.articles__article:nth-child(first-child) .articles__photo {
+    background-color: #EFBD41;
+}
 
-    .timetag {
-        font-size: (8em/16);
-        font-family: "Dela Gothic One", sans-serif;
-        font-weight: lighter;
-        position: absolute;
-        top: 0;
-        left: -10px;
-        background-color: #ebbc45;
-        color: white;
-        padding: 10px;
-        border-radius: 0 0 10px 0;
-        }
+/* .articles__photo img {
+        width: 60%;
+    } */
 
-    .textArea__link {
-        display: flex;
-        justify-content: right;
-        text-align: right;
-        font-size: (8em/16);
-        color: #474747;
-        width: fit-content;
-        margin-left: auto;
-    }
+.articles__text {
+    padding: 15px;
+    color: #2f2f2f;
+    font-weight: bold;
+}
 
-    .textArea__link img {
-        object-fit: contain;
-        width: 30px;
-        margin-left: 5px;
-    }
 
-    .textArea__title {
-        margin: 10px 0;
-        font-size: (18em/16);
-    }
+.timetag {
+    font-size: (8em/16);
+    font-family: "Dela Gothic One", sans-serif;
+    font-weight: lighter;
+    position: absolute;
+    top: 0;
+    left: -10px;
+    background-color: #ebbc45;
+    color: white;
+    padding: 10px;
+    border-radius: 0 0 10px 0;
+}
 
-    .shop__image {
-        position: relative;
-        z-index: 2;
-    }
+.textArea__link {
+    display: flex;
+    justify-content: right;
+    text-align: right;
+    font-size: (8em/16);
+    color: #474747;
+    width: fit-content;
+    margin-left: auto;
+}
+
+.textArea__link img {
+    object-fit: contain;
+    width: 30px;
+    margin-left: 5px;
+}
+
+.textArea__title {
+    margin: 10px 0;
+    font-size: (18em/16);
+}
+
+.shop__image {
+    position: relative;
+    z-index: 2;
+}
 
 .about {
     position: relative;
@@ -323,7 +332,7 @@ img {
     align-items: first baseline;
 }
 
-.about__title .about__logo{
+.about__title .about__logo {
     width: 40%;
 }
 
