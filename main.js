@@ -8,99 +8,197 @@
 
 gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
 
-const top = document.querySelector('.top');
-const nextSection = document.querySelector('#activity');
-
 window.addEventListener("load", () => {
-  gsap
-    .timeline({
-      scrollTrigger: {
-        trigger: ".top",
-        start: "top top",
-        end: "bottom top+=100",
-        pin: true,
-        scrub: 1,
-        markers: false
-      },
-      opacity: 0,
-      y: -80,
-      ease: "power1.inOut"
-    })
-    .to(top, {
-      scale: 2,
-      z: 250,
-      transformOrigin: "center center",
-      opacity:0,
-      ease: "power1.inOut"
-    })
-    .to(
-      nextSection,
-      {
-        scale: 1.4,
-        transformOrigin: "center top",
+  const topSection = document.querySelector(".top");
+  const activitySection = document.querySelector(".activity");
+  const remainingSections = document.querySelectorAll(".shop__image, .about, .thought, .member, .access");
+
+  // Set initial states
+  gsap.set(topSection, {
+    opacity: 1,
+    scale: 1,
+    transformOrigin: "center center"
+  });
+
+  // Position activity section at viewport center initially
+  gsap.set(activitySection, {
+    opacity: 0,
+    scale: 0.3,
+    position: "fixed",
+    top: "50vh",
+    left: "50vw",
+    xPercent: -50,
+    yPercent: -50,
+    zIndex: 1000,
+    visibility: "hidden",
+    transformOrigin: "center center"
+  });
+
+  // Hide remaining sections completely
+  gsap.set(remainingSections, {
+    opacity: 0,
+    visibility: "hidden",
+    y: 50 // Add slight vertical offset for smooth entrance
+  });
+
+  // Create smooth scroll trigger with better timing
+  ScrollTrigger.create({
+    trigger: topSection,
+    start: "top top",
+    end: "bottom top",
+    pin: true,
+    pinSpacing: false,
+    scrub: 0.8, // Smoother scrub value
+    anticipatePin: 1,
+
+    onUpdate: (self) => {
+      const progress = self.progress;
+
+      // Smooth fade out of top section (starts immediately)
+      const topOpacity = Math.max(0, 1 - (progress * 1.5));
+      const topScale = Math.max(0.7, 1 - (progress * 0.3));
+
+      gsap.to(topSection, {
+        opacity: topOpacity,
+        scale: topScale,
+        duration: 0.3,
+        ease: "power2.out"
+      });
+
+      // Activity section fade in (starts at 20% progress for overlap)
+      if (progress > 0.2) {
+        const activityProgress = Math.min(1, (progress - 0.2) / 0.6);
+        const activityOpacity = activityProgress;
+        const activityScale = 0.3 + (activityProgress * 0.7);
+
+        gsap.set(activitySection, { visibility: "visible" });
+        gsap.to(activitySection, {
+          opacity: activityOpacity,
+          scale: activityScale,
+          duration: 0.3,
+          ease: "power2.out"
+        });
+      } else {
+        gsap.to(activitySection, {
+          opacity: 0,
+          duration: 0.2,
+          ease: "power2.out"
+        });
+        gsap.set(activitySection, { visibility: "hidden" });
+      }
+    },
+
+    onLeave: () => {
+      // Complete the transition smoothly
+      gsap.to(topSection, {
+        opacity: 0,
+        scale: 0.7,
+        duration: 0.3,
+        ease: "power2.out",
+        onComplete: () => {
+          gsap.set(topSection, { display: "none" });
+        }
+      });
+
+      // Finalize activity section positioning
+      gsap.to(activitySection, {
         opacity: 1,
-        ease: "power1.inOut"
-      },
-      "<"
-  );
+        scale: 1,
+        duration: 0.3,
+        ease: "power2.out",
+        onComplete: () => {
+          gsap.set(activitySection, {
+            position: "relative",
+            top: "auto",
+            left: "auto",
+            xPercent: 0,
+            yPercent: 0,
+            transform: "none",
+            zIndex: "auto",
+            visibility: "visible"
+          });
+
+          // Smooth entrance of remaining sections with stagger
+          gsap.to(remainingSections, {
+            opacity: 1,
+            visibility: "visible",
+            y: 0,
+            duration: 0.8,
+            stagger: 0.15,
+            ease: "power2.out",
+            delay: 0.3 // Wait a bit after activity section is positioned
+          });
+
+          ScrollTrigger.refresh();
+        }
+      });
+    },
+
+    onEnterBack: () => {
+      // Reset for reverse animation
+      gsap.set(topSection, {
+        display: "block",
+        opacity: 0,
+        scale: 0.7
+      });
+
+      gsap.to(topSection, {
+        opacity: 1,
+        scale: 1,
+        duration: 0,
+        ease: "power2.out"
+      });
+
+      // Reset activity section to center position
+      gsap.set(activitySection, {
+        position: "fixed",
+        top: "50vh",
+        left: "50vw",
+        xPercent: -50,
+        yPercent: -50,
+        zIndex: 1000,
+        transformOrigin: "center center"
+      });
+
+      gsap.to(activitySection, {
+        opacity: 0,
+        scale: 0.3,
+        duration: 0.5,
+        ease: "power2.out",
+        onComplete: () => {
+          gsap.set(activitySection, { visibility: "hidden" });
+        }
+      });
+
+      // Hide remaining sections immediately
+      gsap.set(remainingSections, {
+        opacity: 0,
+        visibility: "hidden",
+        y: 50
+      });
+
+      ScrollTrigger.refresh();
+    }
+  });
+
+  // Additional scroll trigger to ensure smooth activity section positioning
+  ScrollTrigger.create({
+    trigger: activitySection,
+    start: "top center",
+    end: "bottom center",
+    onEnter: () => {
+      // Ensure activity section is properly positioned when it becomes the main content
+      if (activitySection.style.position === "relative") {
+        gsap.set(activitySection, {
+          transformOrigin: "center top"
+        });
+      }
+    }
+  });
+
+  // Optimization: Reduce ScrollTrigger refresh frequency
+  ScrollTrigger.config({
+    limitCallbacks: true,
+    syncInterval: 150
+  });
 });
-
-// window.addEventListener("load", () => {
-//   // Zoom-in and fade-out .top section from center
-//   gsap.timeline({
-//     scrollTrigger: {
-//       trigger: "#top",
-//       start: "top top",
-//       end: "bottom top+=100",
-//       pin: true,
-//       scrub: 1.5,
-//       anticipatePin: 1,
-//       // markers: true,
-//     }
-//   })
-//   .to(".top", {
-//     opacity: 0,
-//     scale: 1.25,
-//     y: 0,
-//     ease: "power1.inOut"
-//   });
-
-//   // .activity section zooms in from center and fades in
-//   gsap.timeline({
-//     scrollTrigger: {
-//       trigger: "#activity",
-//       start: "top center",
-//       end: "bottom top+=100",
-//       pin: true,
-//       scrub: 1.5,
-//       anticipatePin: 1,
-//       // markers: true,
-//     }
-//   })
-//   .fromTo(".activity__inner", {
-//     opacity: 0,
-//     scale: 0.8,
-//     y: 0
-//   }, {
-//     opacity: 1,
-//     scale: 1,
-//     y: 0,
-//     ease: "power2.inOut"
-//   });
-
-//   // Sticky effect for other sections
-//   const stickySections = [".about", ".thought", ".member", ".access"];
-//   stickySections.forEach(selector => {
-//     gsap.timeline({
-//       scrollTrigger: {
-//         trigger: selector,
-//         start: "top center",
-//         end: "bottom top+=100",
-//         pin: true,
-//         scrub: 1.2,
-//         anticipatePin: 1,
-//         // markers: true,
-//       }
-//     });
-//   });
-// });
