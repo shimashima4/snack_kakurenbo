@@ -1,4 +1,6 @@
-html,
+html{
+    scroll-behavior: smooth;
+}
 body {
     height: 100%;
     margin: 0;
@@ -6,12 +8,20 @@ body {
     font-size: 15px;
     line-height: 1.5;
     letter-spacing: 0.002em;
+    overflow-x: hidden;
+
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 img {
     max-width: 100%;
     height: auto;
     vertical-align: bottom;
+
+    transform: translateZ(0);
+    backface-visibility: hidden;
 }
 
 .canvas {
@@ -20,6 +30,37 @@ img {
     display: block;
 }
 
+.main {
+    max-width:390px;
+    width: 100%;
+    margin:0 auto;
+
+    position: relative;
+    min-height: 100vh;
+}
+
+.top,
+.activity,
+.shop__image,
+.about,
+.thought,
+.member,
+.access {
+    backface-visibility: hidden;
+    perspective: 1000px;
+}
+
+.shop__image,
+.about,
+.thought,
+.member,
+.access {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(50px) translateZ(0);
+    will-change: opacity, transform, visibility;
+    backface-visibility: hidden;
+}
 
 /* .header{
 } */
@@ -31,10 +72,13 @@ img {
     overflow: hidden;
 
     text-align: center;
-    transition: transform 0.3s, opacity 0.5s;
     opacity: 1;
     pointer-events: auto;
-    z-index: 8;
+    z-index: 1;
+
+    will-change: transform, opacity;
+    transform: translateZ(0);
+    backface-visibility: hidden;
 }
 
 .top__content{
@@ -92,48 +136,47 @@ img {
 }
 
 .activity {
-    margin-top: -421px;
+    margin-top: 0;
     padding-top: 150px;
-    width: 100%;
     background: #B0C921;
-    position: relative;
-    left: 0;
-    top: 0;
-    transform: none;
+    width: 100%;
+    min-height: 100vh;
     text-align: center;
-    visibility: visible;
     opacity: 0;
-    pointer-events: auto;
-    transition: opacity 0.8s;
-    z-index: 9;
-}
-
-.activity.active,
-.activity.animating {
-    opacity: 1;
-}
-
-.activity.animating {
-    position: fixed;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%) scale(0.2);
-    opacity: 0;
+    visibility: hidden;
+    transform: scale(0.5);
+    transform-origin: center center;
     pointer-events: none;
-    z-index: 10;
-    visibility: visible;
+
+    will-change: transform, opacity;
+    transform: translateZ(0);
+    backface-visibility: hidden;
+    transition: none !important;
 }
 
-#activity.active {
-    visibility: visible;
-    opacity: 1;
-    pointer-events: auto;
+.activity.visible {
+    opacity: 1 !important;
+    visibility: visible !important;
+    transform: scale(1) !important;
+    pointer-events: auto !important;
+}
+
+.activity.positioned {
+    position: relative !important;
+    top: auto !important;
+    left: auto !important;
+    transform: none !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    pointer-events: auto !important;
+    z-index: auto !important;
 }
 
 .activity__inner {
     width: 90%;
     margin-left: auto;
     margin-right: auto;
+    position: relative;
 }
 
 .activity:before {
@@ -147,21 +190,18 @@ img {
     z-index: -1;
 }
 
-/* .activity.visible {
-    opacity: 1;
-    pointer-events: auto;
-    } */
+.activity__content {
+    margin-top: -141px;
+    background-color: white;
+    position: relative;
+    transform: translateZ(0);
+}
 
-    .activity__content {
-        margin-top: -141px;
-        background-color: white;
-        position: relative;
-    }
-
-    .activity__list {
-        margin-top: 140px;
-        padding-top: 120px;
+.activity__list {
+    margin-top: 140px;
+    padding-top: 120px;
     z-index: 1;
+    transform: translateZ(0);
 }
 
 .activity__list img {
@@ -174,10 +214,15 @@ img {
 }
 
 .activity__title {
+    position: relative;
+    z-index: 2;
     margin: 0 auto;
     padding: 100px 40px 7px 40px;
     text-align: center;
     background: url(./images/0_src/report_heading-bg.png) no-repeat center center/ cover;
+
+    will-change: transform;
+    transform: translateZ(0);
 }
 
 .activity__item {
@@ -233,27 +278,34 @@ img {
     }
 
     .textArea__link {
-            display: flex;
-            justify-content: right;
-            text-align: right;
-            font-size: (8em/16);
-            color: #474747;
-            width: fit-content;
-            margin-left: auto;
+        display: flex;
+        justify-content: right;
+        text-align: right;
+        font-size: (8em/16);
+        color: #474747;
+        width: fit-content;
+        margin-left: auto;
     }
 
-            .textArea__link img {
-                object-fit: contain;
-                width: 30px;
-                margin-left: 5px;
-            }
+    .textArea__link img {
+        object-fit: contain;
+        width: 30px;
+        margin-left: 5px;
+    }
 
-        .textArea__title {
-            margin: 10px 0;
-            font-size: (18em/16);
-        }
+    .textArea__title {
+        margin: 10px 0;
+        font-size: (18em/16);
+    }
+
+    .shop__image {
+        position: relative;
+        z-index: 2;
+    }
 
 .about {
+    position: relative;
+    z-index: 3;
     padding: 150px 0 240px;
 
     background:
@@ -310,6 +362,8 @@ img {
 }
 
 .thought {
+    position: relative;
+    z-index: 4;
     background: url(./images/0_src/feeling_bg.png) no-repeat center center/ cover;
 }
 
@@ -351,6 +405,11 @@ img {
 
 .thought__phrase:last-child {
     padding-bottom: 300px;
+}
+
+.member {
+    position: relative;
+    z-index: 5;
 }
 
 .member__inner {
@@ -439,6 +498,9 @@ img {
 
     position: relative;
     background: #E0EEF1;
+
+    z-index: 6;
+    margin-top: -75px;
 }
 
 .access:before {
@@ -560,4 +622,17 @@ img {
     line-height: 1.5;
     text-align: center;
     color: #000;
+}
+
+@media (max-width: 768px) {
+
+    .top,
+    .activity,
+    .shop__image,
+    .about,
+    .thought,
+    .member,
+    .access {
+        transform: translate3d(0, 0, 0);
+    }
 }
