@@ -185,8 +185,12 @@ body {
   margin-top: 60px;
 }
 
+.memoryCorner {
+  padding-bottom: 200px;
+}
+
 .memoryCorner h2 {
-  margin-top: 130px;
+  margin-top: 60px;
   margin-bottom: 20px;
   font-weight: bold;
   font-size: 18px;
@@ -202,4 +206,10 @@ body {
   max-width: 400px;
   z-index: 0;
   background: url(./images/0_src/gizagiza.png);
+}
+
+.heart {
+  display: block;
+  margin: 80px auto 0;
+  /* margin-top: 30px; */
 }
