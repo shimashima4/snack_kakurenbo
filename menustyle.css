@@ -3,6 +3,7 @@ body {
 }
 
 .nav {
+  display: block;
   position: fixed;
   bottom: 3vh;
   transform: translateX(10%);
