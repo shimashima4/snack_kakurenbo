@@ -9,16 +9,11 @@ body {
   transform: translateX(10%);
   z-index: 1000;
   width: 100%;
-  max-width: 324px;
+  max-width: 364px;
   text-align: center;
   border: 3px solid black;
   border-radius: 20px;
   transition: all 0.3s ease;
-}
-@media (850px <= width) {
-  .nav {
-    display: none;
-  }
 }
 .nav__inner {
   display: grid;
@@ -52,10 +47,10 @@ body {
   border-radius: 20px;
   background-color: white;
 }
-.nav--info {
+.nav--info, .nav--top {
   transform: translateX(2%);
 }
-.nav--info__menu a {
+.nav--info__menu a, .nav--top__menu a {
   background: url(./images/0_src/kinako_bo.png) 20% center no-repeat;
 }
 

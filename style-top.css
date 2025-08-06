@@ -184,7 +184,7 @@ img {
 .activity:before {
     content: '';
     position: absolute;
-    top: -330px;
+    top: -295px;
     left: 0;
     width: 50%;
     height: 50%;
@@ -489,10 +489,6 @@ img {
     line-height: 1.5;
     text-align: center;
     color: #4E3D3D;
-}
-
-.member__pic {
-    margin-top: -55px;
 }
 
 .access {

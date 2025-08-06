@@ -6,7 +6,9 @@
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>スナックかくれんぼ</title>
-    <link rel="stylesheet" href="./style-top.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/the-new-css-reset/css/reset.min.css">
+    <link rel="stylesheet" href="./css/top-css/style-top.css" />
+    <link rel="stylesheet" href="./menustyle.css" />
 
     <script>
         (function (d) {
@@ -47,6 +49,19 @@
         </div>
     </header>
     <main class="main">
+        <nav class="nav nav--top">
+            <div class="nav__inner">
+                <ul class="nav__ul">
+                    <li><a href="./info.html">かくれんぼニュース</a></li>
+                    <li><a href="#about">かくれんぼについて</a></li>
+                    <li><a href="#thought">れいちゃんの想ひ</a></li>
+                    <li><a href="./ranking.html">おすすめの駄菓子屋</a></li>
+                    <li><a href="./memory.html">思い出・感想</a></li>
+                </ul>
+            </div>
+            <p class="nav__menu"><a>MENU</a></p>
+            <p></p>
+        </nav>
         <section class="top" id="top">
             <div class="top__wall">
                 <img src="./images/0_src/top-wall.png" alt="top-page" />
@@ -136,7 +151,7 @@
         <div class="shop__image">
             <img src="./images/0_src/pics.png" alt="shop-image" />
         </div>
-        <section class="about">
+        <section class="about" id="about">
             <div class="about__inner">
                 <div class="about__title">
                     <h2 class="about__logo">
@@ -168,7 +183,7 @@
                 <a href="https://uchidabashi-shotengai.com/" target="_blank">https://uchidabashi-shotengai.com/</a>
             </div>
         </section>
-        <section class="thought">
+        <section class="thought" id="thought">
             <div class="thought__inner">
                 <div class="thought__pic">
                     <img src="./images/0_src/feel.png" alt="thought" />
@@ -302,6 +317,7 @@
         </div>
     </footer>
     <script type="module" src="./main.js"></script>
+    <script src="./menu.js"></script>
 
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
 

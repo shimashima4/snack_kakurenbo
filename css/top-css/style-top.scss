@@ -1,0 +1,666 @@
+$breakpoint-mobile: 768px;
+$max-width: 1200px;
+$font-main: "Hiragino Kaku Gothic ProN", sans-serif;
+
+html {
+    scroll-behavior: smooth;
+    font-family: $font-main;
+}
+
+body {
+    margin: 0;
+    font-family: $font-main;
+    font-size: 15px;
+    line-height: 1.5;
+    letter-spacing: 0.002em;
+    overflow-x: hidden;
+
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    vertical-align: bottom;
+
+    transform: translateZ(0);
+    backface-visibility: hidden;
+}
+
+.canvas {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+.main {
+    max-width: 390px;
+    width: 100%;
+    margin: 0 auto;
+
+    position: relative;
+    min-height: 100vh;
+}
+
+.top,
+.activity,
+.shop__image,
+.about,
+.thought,
+.member,
+.access {
+    backface-visibility: hidden;
+    perspective: 1000px;
+}
+
+.shop__image,
+.about,
+.thought,
+.member,
+.access {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(50px) translateZ(0);
+    will-change: opacity, transform, visibility;
+    backface-visibility: hidden;
+}
+
+// ============================
+// Top
+// ============================
+.top {
+    display: block;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+
+    text-align: center;
+    opacity: 1;
+    pointer-events: auto;
+    z-index: 1;
+
+    will-change: transform, opacity;
+    transform: translateZ(0);
+    backface-visibility: hidden;
+
+    &__content {
+        position: relative;
+
+    }
+
+    &__inner {
+        width: 100%;
+        max-width: 390px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    &__pic {
+        position: relative;
+        top: -775px;
+        left: 0;
+        width: fit-content;
+        height: 40%;
+        z-index: 1;
+    }
+
+    &__pic &__logo img {
+        position: relative;
+        top: -110px;
+        left: 0;
+        width: 50%;
+        z-index: 1;
+    }
+
+    &__object {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: flex-end;
+
+        position: relative;
+        top: -530px;
+        left: 5px
+    }
+
+    &__object img {
+        width: 40%;
+    }
+
+    &__object .bike {
+        width: 60%;
+    }
+
+    &__object .bike img {
+        width: 100%;
+
+        margin-left: 60px;
+        ;
+    }
+}
+
+// ============================
+// Activity
+// ============================
+.activity {
+    margin-top: 0;
+    padding-top: 150px;
+    background: #B0C921;
+    width: 100%;
+    min-height: 100vh;
+    text-align: center;
+    opacity: 0;
+    visibility: hidden;
+    transform: scale(0.5);
+    transform-origin: center center;
+    pointer-events: none;
+
+    will-change: transform, opacity;
+    transform: translateZ(0);
+    backface-visibility: hidden;
+    transition: none !important;
+
+    &.visible {
+        opacity: 1 !important;
+        visibility: visible !important;
+        transform: scale(1) !important;
+        pointer-events: auto !important;
+    }
+
+    &.positioned {
+        position: relative !important;
+        top: auto !important;
+        left: auto !important;
+        transform: none !important;
+        opacity: 1 !important;
+        visibility: visible !important;
+        pointer-events: auto !important;
+        z-index: auto !important;
+    }
+
+    &__inner {
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+        position: relative;
+    }
+
+    &:before {
+        content: '';
+        position: absolute;
+        top: -295px;
+        left: 0;
+        width: 50%;
+        height: 50%;
+        background: url(./images/0_src/megaphone_top.png) no-repeat center center/ contain;
+        z-index: -1;
+    }
+
+    &__content {
+        margin-top: -141px;
+        background-color: white;
+        position: relative;
+        transform: translateZ(0);
+    }
+
+    &__list {
+        margin-top: 140px;
+        padding-top: 120px;
+        z-index: 1;
+        transform: translateZ(0);
+    }
+
+    &__list img {
+        width: 100%;
+        max-width: 390px;
+        height: auto;
+
+        position: relative;
+        z-index: 5;
+    }
+
+    &__title {
+        position: relative;
+        z-index: 2;
+        margin: 0 auto;
+        padding: 100px 40px 7px 40px;
+        text-align: center;
+        background: url(./images/0_src/report_heading-bg.png) no-repeat center center/ cover;
+
+        will-change: transform;
+        transform: translateZ(0);
+    }
+
+    &__item {
+        margin-top: -20px;
+        background: #fff;
+    }
+}
+
+// ============================
+// Articles
+// ============================
+.articles__article {
+    position: relative;
+    width: fit-content;
+    margin: -0.5px auto 0;
+
+    &__flex {
+        display: block;
+        background-color: #fcf5d6;
+        border-radius: 0 0 15px 15px;
+        max-width: 336px;
+    }
+
+    &__photo {
+        background-color: #b0c921;
+        border-radius: 10px;
+        padding: 15px;
+    }
+
+    &__article:first-child &__photo {
+        background-color: #EFBD41;
+    }
+
+    /* .articles__photo img {
+        width: 60%;
+    } */
+
+    &__text {
+        padding: 15px;
+        color: #2f2f2f;
+        font-weight: bold;
+    }
+}
+
+.timetag {
+    font-size: (8em/16);
+    font-family: "Dela Gothic One", sans-serif;
+    font-weight: lighter;
+    position: absolute;
+    top: 0;
+    left: -10px;
+    background-color: #ebbc45;
+    color: white;
+    padding: 10px;
+    border-radius: 0 0 10px 0;
+}
+
+.textArea__link {
+    display: flex;
+    justify-content: right;
+    text-align: right;
+    font-size: (8em/16);
+    color: #474747;
+    width: fit-content;
+    margin-left: auto;
+
+    &__link img {
+        object-fit: contain;
+        width: 30px;
+        margin-left: 5px;
+    }
+
+    &__title {
+        margin: 10px 0;
+        font-size: (18em/16);
+    }
+}
+
+// ============================
+// Shop Image
+// ============================
+.shop__image {
+    position: relative;
+    z-index: 2;
+}
+
+// ============================
+// About
+// ============================
+.about {
+    position: relative;
+    z-index: 3;
+    padding: 150px 0 240px;
+
+    background:
+        url(../../images/0_src/candy.png) no-repeat top 95px left -12px/ 90px,
+        url(../../images/0_src/umaibo.png) no-repeat top 155px right -35px/ 90px,
+        url(../../images/0_src/ramune_bin.png) no-repeat top 352px left -40px/ 90px,
+        url(../../images/0_src/fruits.png) no-repeat top 480px right -35px/ 100px,
+        url(../../images/0_src/yogurt.png) no-repeat top 680px left -35px/ 100px,
+        url(../../images/0_src/loose.png) no-repeat bottom 100px right -30px/ 100px;
+
+    &__inner {
+        width: 90%;
+        max-width: 390px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    &__title {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: first baseline;
+    }
+
+    &__title &__logo {
+        width: 40%;
+    }
+
+    &__text {
+        margin: 0 auto;
+        display: block;
+        width: 300px;
+        font-size: 15px;
+        line-height: 1.7;
+
+        text-align: left;
+    }
+
+    &__text span {
+        font-size: 12px;
+        line-height: 1.5;
+    }
+
+    &__text a {
+        color: #000;
+        text-decoration: none;
+
+        cursor: pointer;
+    }
+}
+
+.loader {
+    margin: 36px 0;
+    text-align: center;
+}
+
+// ============================
+// Thought
+// ============================
+.thought {
+    position: relative;
+    z-index: 4;
+    background: url(../../images/0_src/feeling_bg.png) no-repeat center center/ cover;
+
+    &__inner {
+        width: 90%;
+        max-width: 390px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    &__pic {
+        padding: 90px 0 35px;
+        text-align: center;
+    }
+
+    &__pic img {
+        border: 5px solid #AA977B;
+        border-radius: 40px;
+    }
+
+    &__text {
+        padding: 0 20px 50px;
+        text-align: center;
+        font-family: "hiragino-kaku-gothic-pron", sans-serif;
+        font-size: 14px;
+        color: #4E3D3D;
+    }
+
+    &__phrase {
+        padding-bottom: 30px;
+    }
+
+    &__phrase p {
+        width: fit-content;
+        margin: 0 auto 15px;
+        padding-bottom: 5px;
+        border-bottom: 1px solid #AE9D85;
+    }
+
+    &__phrase:last-child {
+        padding-bottom: 300px;
+    }
+}
+
+// ============================
+// Member
+// ============================
+.member {
+    position: relative;
+    z-index: 5;
+
+    &__inner {
+        width: 90%;
+        max-width: 390px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    &__header {
+        margin-left: 30px;
+    }
+
+    &__header img {
+        width: 70%;
+        aspect-ratio: 4/3;
+        object-fit: contain;
+    }
+
+    &__thoughts {
+        margin-top: -150px;
+    }
+
+    &__thoughts-pic {
+        position: relative;
+        z-index: -1;
+    }
+
+    &__thoughts img {
+        width: 100%;
+        aspect-ratio: 4/3;
+        object-fit: contain;
+    }
+
+    &__list {
+        margin-top: -145px;
+        padding-bottom: 145px;
+        background: #FEF6DF;
+    }
+
+    &__item {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+
+    &__item:nth-child(2n) {
+        flex-direction: row-reverse;
+    }
+}
+
+// ============================
+// Card
+// ============================
+.card {
+    padding: 5px 0;
+
+    &__pic {
+        width: 25%;
+        transform: rotateY(-180deg);
+    }
+
+    &__text {
+        width: 60%;
+        padding: 25px;
+        background: url(../../images/0_src/messege-bg.png) no-repeat center center/ contain;
+    }
+
+    &__item:nth-child(2n) .card__text {
+        background: url(../../images/0_src/message-bg2.png) no-repeat center center/ contain;
+    }
+
+
+    &__text p {
+        font-size: 12px;
+        font-weight: bold;
+        line-height: 1.5;
+        text-align: center;
+        color: #4E3D3D;
+    }
+}
+
+// ============================
+// Access
+// ============================
+.access {
+    margin-top: -75px;
+
+    position: relative;
+    background: #E0EEF1;
+
+    z-index: 6;
+    margin-top: -75px;
+
+    &:before {
+        content: '';
+        position: absolute;
+        display: block;
+        width: 100%;
+        height: 100%;
+        background:
+            url(../../images/0_src/ivy_top.png) no-repeat top -10px left/150px,
+            url(../../images/0_src/ivy_bottom.png) no-repeat bottom 130px right/ 155px,
+            url(../../images/0_src/tree_top.png) no-repeat top 75px right/ 160px,
+            url(../../images/0_src/tree_bottom.png) no-repeat bottom 110px left/ 180px;
+    }
+
+    &__inner {
+        width: 90%;
+        max-width: 390px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    &__header {
+        width: 65%;
+
+        margin-bottom: 50px;
+    }
+
+    &__description {
+        border: 4px solid #DBC176;
+        border-radius: 8px;
+
+        overflow: hidden;
+    }
+
+    &__map {
+        width: 100%;
+        aspect-ratio: 4/3;
+        object-fit: contain;
+
+        overflow: hidden;
+    }
+
+    &__info {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        align-items: flex-start;
+
+        padding: 35px 0 30px;
+        background: url(../../images/0_src/access_bg-wood.png) no-repeat center center/ cover;
+    }
+
+    &__info img {
+        width: 40%;
+
+        margin-top: 20px;
+    }
+
+    &__info-text {
+        width: 45%;
+        color: #fff;
+    }
+
+    &__title {
+        font-size: 14px;
+        font-weight: bold;
+    }
+
+    &__detail {
+        font-size: 14px;
+        line-height: 1.5;
+    }
+
+    &__detail p {
+        margin: 0px;
+    }
+
+    &__btn {
+        margin-top: 20px;
+        padding: 10px 15px;
+
+        text-align: center;
+        background: #009340;
+
+        border-radius: 20px;
+        border: 1px solid #fff;
+
+        cursor: pointer;
+    }
+
+    &__btn a {
+        font-size: 12px;
+        font-weight: bold;
+        color: #fff;
+        text-decoration: none;
+    }
+}
+
+.bike-boy {
+    width: 60%;
+    transform: rotateY(180deg);
+    margin: 0 145px 0 85px;
+}
+
+// ============================
+// Footer
+// ============================
+.footer {
+    padding: 25px 80px;
+
+    &__inner {
+        width: 90%;
+        max-width: 390px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    &__text {
+        font-size: 22px;
+        font-weight: normal;
+        line-height: 1.5;
+        text-align: center;
+        color: #000;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .top,
+    .activity,
+    .shop__image,
+    .about,
+    .thought,
+    .member,
+    .access {
+        transform: translate3d(0, 0, 0);
+    }
+}

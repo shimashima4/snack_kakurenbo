@@ -12,6 +12,7 @@ window.addEventListener("load", () => {
   const topSection = document.querySelector(".top");
   const activitySection = document.querySelector(".activity");
   const remainingSections = document.querySelectorAll(".shop__image, .about, .thought, .member, .access");
+  const nav = document.querySelector(".nav");
 
   // Set initial states
   gsap.set(topSection, {
@@ -85,6 +86,7 @@ window.addEventListener("load", () => {
           ease: "power2.out"
         });
         gsap.set(activitySection, { visibility: "hidden" });
+        gsap.set(nav, { display: "none" });
       }
     },
 
@@ -117,6 +119,8 @@ window.addEventListener("load", () => {
             zIndex: "auto",
             visibility: "visible"
           });
+
+            gsap.set(nav, { display: "block" });
 
           // Smooth entrance of remaining sections with stagger
           gsap.to(remainingSections, {
@@ -201,4 +205,18 @@ window.addEventListener("load", () => {
     limitCallbacks: true,
     syncInterval: 150
   });
+
+  const scrollToHash = () => {
+  const hash = window.location.hash;
+  if (hash) {
+    const target = document.querySelector(hash);
+    if (target) {
+      setTimeout(() => {
+        target.scrollIntoView({ behavior: "smooth" });
+      }, 1500);
+    }
+  }
+};
+
+scrollToHash();
 });
