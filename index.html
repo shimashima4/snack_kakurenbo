@@ -7,8 +7,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>スナックかくれんぼ</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/the-new-css-reset/css/reset.min.css">
-    <link rel="stylesheet" href="./css/top-css/style-top.css" />
+    <link rel="stylesheet" href="./style-top.css" />
     <link rel="stylesheet" href="./menustyle.css" />
+    <link rel="stylesheet" href="./tag.css" />
+    <link rel="stylesheet" href="./backimage.css" />
 
     <script>
         (function (d) {
@@ -44,10 +46,11 @@
 </head>
 
 <body>
-    <header class="header">
-        <div class="header__inner">
+    <section class="top-space section">
+        <div class="top-space__logo">
+            <a href="./index.html"><img src="./images/0_src/logo_black.png" alt="" /></a>
         </div>
-    </header>
+    </section>
     <main class="main">
         <nav class="nav nav--top">
             <div class="nav__inner">
@@ -83,241 +86,260 @@
                 </div>
             </div>
         </section>
-        <section class="activity" id="activity" data-scroll-section>
-            <h2 class="activity__title">
-                <img src="./images/0_src/report_heading-ruby.gif" alt="activity-logo" />
-            </h2>
-            <div class="activity__content">
-                <div class="activity__inner">
-                    <div class="activity__list">
-                        <div class="activity__item articles">
-                            <article class="articles__article">
-                                <span class="timetag"> 2025.01.01 </span>
-                                <span class="pin"><img src="" alt="" /></span>
-                                <div class="articles__flex">
-                                    <div class="articles__photo">
-                                        <img src="./images/0_src/activity_pic.webp" alt="activity-pic" />
+        <div class="wrapper">
+            <section class="activity" id="activity" data-scroll-section>
+                <h2 class="activity__title">
+                    <img src="./images/0_src/report_heading-ruby.gif" alt="activity-logo" />
+                </h2>
+                <div class="activity__content">
+                    <div class="activity__inner">
+                        <div class="activity__list">
+                            <div class="activity__item articles">
+                                <article class="articles__article">
+                                    <span class="timetag"> 2025.01.01 </span>
+                                    <span class="pin"><img src="" alt="" /></span>
+                                    <div class="articles__flex">
+                                        <div class="articles__photo">
+                                            <img src="./images/0_src/activity_pic.webp" alt="activity-pic" />
+                                        </div>
+                                        <div class="articles__text textArea">
+                                            <p class="textArea__tags">タグ</p>
+                                            <h2 class="textArea__title">あけましておめでとう</h2>
+                                            <a class="textArea__link" href="#">
+                                                <span>記事を読む</span>
+                                                <img src="./images/0_src/ramune_bin.png" alt="" />
+                                            </a>
+                                        </div>
                                     </div>
-                                    <div class="articles__text textArea">
-                                        <p class="textArea__tags">タグ</p>
-                                        <h2 class="textArea__title">あけましておめでとう</h2>
-                                        <a class="textArea__link" href="#">
-                                            <span>記事を読む</span>
-                                            <img src="./images/0_src/ramune_bin.png" alt="" />
-                                        </a>
+                                </article>
+                                <article class="articles__article">
+                                    <span class="timetag"> 2025.01.01 </span>
+                                    <span class="pin"><img src="" alt="" /></span>
+                                    <div class="articles__flex">
+                                        <div class="articles__photo">
+                                            <img src="./images/0_src/activity_pic.webp" alt="activity-pic" />
+                                        </div>
+                                        <div class="articles__text textArea">
+                                            <p class="textArea__tags">タグ</p>
+                                            <h2 class="textArea__title">あけましておめでとう</h2>
+                                            <a class="textArea__link" href="#">
+                                                <span>記事を読む</span>
+                                                <img src="./images/0_src/ramune_bin.png" alt="" />
+                                            </a>
+                                        </div>
                                     </div>
-                                </div>
-                            </article>
-                            <article class="articles__article">
-                                <span class="timetag"> 2025.01.01 </span>
-                                <span class="pin"><img src="" alt="" /></span>
-                                <div class="articles__flex">
-                                    <div class="articles__photo">
-                                        <img src="./images/0_src/activity_pic.webp" alt="activity-pic" />
+                                </article>
+                                <article class="articles__article">
+                                    <span class="timetag"> 2025.01.01 </span>
+                                    <span class="pin"><img src="" alt="" /></span>
+                                    <div class="articles__flex">
+                                        <div class="articles__photo">
+                                            <img src="./images/0_src/activity_pic.webp" alt="activity-pic" />
+                                        </div>
+                                        <div class="articles__text textArea">
+                                            <p class="textArea__tags">タグ</p>
+                                            <h2 class="textArea__title">あけましておめでとう</h2>
+                                            <a class="textArea__link" href="#">
+                                                <span>記事を読む</span>
+                                                <img src="./images/0_src/ramune_bin.png" alt="" />
+                                            </a>
+                                        </div>
                                     </div>
-                                    <div class="articles__text textArea">
-                                        <p class="textArea__tags">タグ</p>
-                                        <h2 class="textArea__title">あけましておめでとう</h2>
-                                        <a class="textArea__link" href="#">
-                                            <span>記事を読む</span>
-                                            <img src="./images/0_src/ramune_bin.png" alt="" />
-                                        </a>
-                                    </div>
-                                </div>
-                            </article>
-                            <article class="articles__article">
-                                <span class="timetag"> 2025.01.01 </span>
-                                <span class="pin"><img src="" alt="" /></span>
-                                <div class="articles__flex">
-                                    <div class="articles__photo">
-                                        <img src="./images/0_src/activity_pic.webp" alt="activity-pic" />
-                                    </div>
-                                    <div class="articles__text textArea">
-                                        <p class="textArea__tags">タグ</p>
-                                        <h2 class="textArea__title">あけましておめでとう</h2>
-                                        <a class="textArea__link" href="#">
-                                            <span>記事を読む</span>
-                                            <img src="./images/0_src/ramune_bin.png" alt="" />
-                                        </a>
-                                    </div>
-                                </div>
-                            </article>
+                                </article>
+                            </div>
+                            <p class="activity__text">もっと活動を見る→</p>
                         </div>
-                        <p class="activity__text">もっと活動を見る→</p>
                     </div>
                 </div>
+            </section>
+            <div class="shop__image">
+                <img src="./images/0_src/pics.png" alt="shop-image" />
             </div>
-        </section>
-        <div class="shop__image">
-            <img src="./images/0_src/pics.png" alt="shop-image" />
-        </div>
-        <section class="about" id="about">
-            <div class="about__inner">
-                <div class="about__title">
-                    <h2 class="about__logo">
-                        <img src="./images/0_src/logo_black.png" alt="logo" />
-                    </h2>
-                    <small>は</small>
+            <section class="about" id="about">
+                <div class="about__inner">
+                    <div class="about__title">
+                        <h2 class="about__logo">
+                            <img src="./images/0_src/logo_black.png" alt="logo" />
+                        </h2>
+                        <small>は</small>
+                    </div>
+                    <div class="about__text">
+                        <p>
+                            名古屋市熱田区内に位置する<br />
+                            内田橋商店街の空き店舗をお借りして<br />
+                            営業している駄菓子屋さんです。
+                        </p>
+                        <p>
+                            営業日は週一度だけ。<br />
+                            毎週木曜日の14時から<br />
+                            みなさまをお待ちしております。
+                        </p>
+                    </div>
+                </div>
+                <div class="loader">
+                    <img src="./images/0_src/loader.png" alt="loader" />
                 </div>
                 <div class="about__text">
                     <p>
-                        名古屋市熱田区内に位置する<br />
-                        内田橋商店街の空き店舗をお借りして<br />
-                        営業している駄菓子屋さんです。
+                        スナックかくれんぼは 内田橋商店街の皆さまの協力で 活動できています。
                     </p>
-                    <p>
-                        営業日は週一度だけ。<br />
-                        毎週木曜日の14時から<br />
-                        みなさまをお待ちしております。
-                    </p>
+                    <span class="about__link">▼内田橋商店街ホームページ</span>
+                    <a href="https://uchidabashi-shotengai.com/" target="_blank">https://uchidabashi-shotengai.com/</a>
                 </div>
-            </div>
-            <div class="loader">
-                <img src="./images/0_src/loader.png" alt="loader" />
-            </div>
-            <div class="about__text">
-                <p>
-                    スナックかくれんぼは 内田橋商店街の皆さまの協力で 活動できています。
-                </p>
-                <span class="about__link">▼内田橋商店街ホームページ</span>
-                <a href="https://uchidabashi-shotengai.com/" target="_blank">https://uchidabashi-shotengai.com/</a>
-            </div>
-        </section>
-        <section class="thought" id="thought">
-            <div class="thought__inner">
-                <div class="thought__pic">
-                    <img src="./images/0_src/feel.png" alt="thought" />
-                </div>
-                <div class="thought__text">
-                    <div class="thought__phrase">
-                        <p>名古屋市熱田区内に位置する</p>
-                        <p>内田橋商店街の空き店舗をお借りして</p>
-                        <p>営業している駄菓子屋さんです。</p>
+            </section>
+            <section class="thought" id="thought">
+                <div class="thought__inner">
+                    <div class="thought__pic">
+                        <img src="./images/0_src/feel.png" alt="thought" />
                     </div>
-                    <div class="thought__phrase">
-                        <p>名古屋市熱田区内に位置する</p>
-                        <p>営業している駄菓子屋さんです。</p>
-                    </div>
-                    <div class="thought__phrase">
-                        <p>名古屋市熱田区内に位置する</p>
-                        <p>内田橋商店街の空き店舗をお借りして</p>
-                        <p>営業している駄菓子屋さんです。</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section class="member">
-            <h2 class="member__header">
-                <img src="./images/0_src/member_heading.png" alt="member-logo" />
-            </h2>
-            <div class="member__thoughts">
-                <div class="member__thoughts-pic">
-                    <img src="./images/0_src/chopsticks.png" alt="chopsticks" />
-                </div>
-                <div class="member__inner">
-                    <div class="member__list">
-                        <article class="member__item card">
-                            <h2 class="card__pic">
-                                <img src="./images/0_src/icon.gif" alt="icon" />
-                            </h2>
-                            <div class="card__text">
-                                <p>
-                                    子供との交流がしたくてボランティアを
-                                    始めました。学校の学科的にも子供と
-                                    関わる何かがしたかったので、良い経験 になっています。
-                                </p>
-                            </div>
-                        </article>
-                        <article class="member__item card">
-                            <h2 class="card__pic">
-                                <img src="./images/0_src/reityan.gif" alt="icon" />
-                            </h2>
-                            <div class="card__text">
-                                <p>
-                                    子供との交流がしたくてボランティアを
-                                    始めました。学校の学科的にも子供と
-                                    関わる何かがしたかったので、良い経験 になっています。
-                                </p>
-                            </div>
-                        </article>
-                        <article class="member__item card">
-                            <h2 class="card__pic">
-                                <img src="./images/0_src/icon.gif" alt="icon" />
-                            </h2>
-                            <div class="card__text">
-                                <p>
-                                    子供との交流がしたくてボランティアを
-                                    始めました。学校の学科的にも子供と
-                                    関わる何かがしたかったので、良い経験 になっています。
-                                </p>
-                            </div>
-                        </article>
-                        <article class="member__item card">
-                            <h2 class="card__pic">
-                                <img src="./images/0_src/reityan.gif" alt="icon" />
-                            </h2>
-                            <div class="card__text">
-                                <p>
-                                    子供との交流がしたくてボランティアを
-                                    始めました。学校の学科的にも子供と
-                                    関わる何かがしたかったので、良い経験 になっています。
-                                </p>
-                            </div>
-                        </article>
-                    </div>
-                </div>
-                <div class="member__pic">
-                    <img src="./images/0_src/cup.png" alt="cup" />
-                </div>
-            </div>
-        </section>
-        <section class="access">
-            <div class="access__inner">
-                <h2 class="access__header">
-                    <img src="./images/0_src/access_heading.png" alt="access-pic" />
-                </h2>
-                <div class="access__description">
-                    <div class="access__map">
-                        <iframe
-                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3263.640770038445!2d136.90720560000003!3d35.11567999999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60037bac7d252995%3A0x24b9daf6c5a01907!2z5YaF55Sw5qmL5ZWG5bqX6KGX77yI6YCa56ewOuODgOODkOOCt--8iQ!5e0!3m2!1sja!2sjp!4v1752218675255!5m2!1sja!2sjp"
-                            width="600" height="450" style="border: 0" allowfullscreen="" loading="lazy"
-                            referrerpolicy="no-referrer-when-downgrade"></iframe>
-                    </div>
-                    <div class="access__info">
-                        <img src="./images/0_src/logo_white.png" alt="logo-white" />
-                        <div class="access__info-text address">
-                            <div class="address__title">
-                                <p>内田橋商店街のどこか</p>
-                            </div>
-                            <div class="address__detail">
-                                <p>〒457-0862</p>
-                                <p>愛知県名古屋市南区内田橋1丁目</p>
-                            </div>
-                            <button class="address__btn">
-                                <a href="https://goo.gl/maps/4b1d8f7Z5gk2" target="_blank">Google Mapを開く</a>
-                            </button>
+                    <div class="thought__text">
+                        <div class="thought__phrase">
+                            <p>名古屋市熱田区内に位置する</p>
+                            <p>内田橋商店街の空き店舗をお借りして</p>
+                            <p>営業している駄菓子屋さんです。</p>
+                        </div>
+                        <div class="thought__phrase">
+                            <p>名古屋市熱田区内に位置する</p>
+                            <p>営業している駄菓子屋さんです。</p>
+                        </div>
+                        <div class="thought__phrase">
+                            <p>名古屋市熱田区内に位置する</p>
+                            <p>内田橋商店街の空き店舗をお借りして</p>
+                            <p>営業している駄菓子屋さんです。</p>
                         </div>
                     </div>
                 </div>
-                <div class="bike-boy">
-                    <a href="index.html">
-                        <img src="./images/0_src/bike_boy.png" alt="bike-boy" />
-                    </a>
+            </section>
+            <section class="member">
+                <h2 class="member__header">
+                    <img src="./images/0_src/member_heading.png" alt="member-logo" />
+                </h2>
+                <div class="member__thoughts">
+                    <div class="member__thoughts-pic">
+                        <img src="./images/0_src/chopsticks.png" alt="chopsticks" />
+                    </div>
+                    <div class="member__inner">
+                        <div class="member__list">
+                            <article class="member__item card">
+                                <h2 class="card__pic">
+                                    <img src="./images/0_src/icon.gif" alt="icon" />
+                                </h2>
+                                <div class="card__text">
+                                    <p>
+                                        子供との交流がしたくてボランティアを
+                                        始めました。学校の学科的にも子供と
+                                        関わる何かがしたかったので、良い経験 になっています。
+                                    </p>
+                                </div>
+                            </article>
+                            <article class="member__item card">
+                                <h2 class="card__pic">
+                                    <img src="./images/0_src/reityan.gif" alt="icon" />
+                                </h2>
+                                <div class="card__text">
+                                    <p>
+                                        子供との交流がしたくてボランティアを
+                                        始めました。学校の学科的にも子供と
+                                        関わる何かがしたかったので、良い経験 になっています。
+                                    </p>
+                                </div>
+                            </article>
+                            <article class="member__item card">
+                                <h2 class="card__pic">
+                                    <img src="./images/0_src/icon.gif" alt="icon" />
+                                </h2>
+                                <div class="card__text">
+                                    <p>
+                                        子供との交流がしたくてボランティアを
+                                        始めました。学校の学科的にも子供と
+                                        関わる何かがしたかったので、良い経験 になっています。
+                                    </p>
+                                </div>
+                            </article>
+                            <article class="member__item card">
+                                <h2 class="card__pic">
+                                    <img src="./images/0_src/reityan.gif" alt="icon" />
+                                </h2>
+                                <div class="card__text">
+                                    <p>
+                                        子供との交流がしたくてボランティアを
+                                        始めました。学校の学科的にも子供と
+                                        関わる何かがしたかったので、良い経験 になっています。
+                                    </p>
+                                </div>
+                            </article>
+                        </div>
+                    </div>
+                    <div class="member__pic">
+                        <img src="./images/0_src/cup.png" alt="cup" />
+                    </div>
                 </div>
-            </div>
-        </section>
-    </main>
-    <footer class="footer">
-        <div class="footer__inner">
+            </section>
+            <section class="access">
+                <div class="access__inner">
+                    <h2 class="access__header">
+                        <img src="./images/0_src/access_heading.png" alt="access-pic" />
+                    </h2>
+                    <div class="access__description">
+                        <div class="access__map">
+                            <iframe
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3263.640770038445!2d136.90720560000003!3d35.11567999999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60037bac7d252995%3A0x24b9daf6c5a01907!2z5YaF55Sw5qmL5ZWG5bqX6KGX77yI6YCa56ewOuODgOODkOOCt--8iQ!5e0!3m2!1sja!2sjp!4v1752218675255!5m2!1sja!2sjp"
+                                width="600" height="450" style="border: 0" allowfullscreen="" loading="lazy"
+                                referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        </div>
+                        <div class="access__info">
+                            <img src="./images/0_src/logo_white.png" alt="logo-white" />
+                            <div class="access__info-text address">
+                                <div class="address__title">
+                                    <p>内田橋商店街のどこか</p>
+                                </div>
+                                <div class="address__detail">
+                                    <p>〒457-0862</p>
+                                    <p>愛知県名古屋市南区内田橋1丁目</p>
+                                </div>
+                                <button class="address__btn">
+                                    <a href="https://goo.gl/maps/4b1d8f7Z5gk2" target="_blank">Google Mapを開く</a>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bike-boy">
+                        <a href="index.html">
+                            <img src="./images/0_src/bike_boy.png" alt="bike-boy" />
+                        </a>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <div class="footer">
             <small class="footer__text">
                 みなさまのお越しを<br />
                 お待ちしております<br />
                 的なコメント
             </small>
         </div>
-    </footer>
+    </main>
+
+    <div class="header__wrap infoHeader">
+        <a href="./info.html">
+            <img src="./images/0_src/report_btn-tag.gif" alt="活動報告" class="linktag linktag--first" />
+        </a>
+        <a href="#about">
+            <img src="./images/0_src/about_btn-tag.gif" alt="かくれんぼについて" class="linktag linktag--second" />
+        </a>
+        <a href="#thought">
+            <img src="./images/0_src/think_btn-tag.gif" alt="レイちゃんの想ひ" class="linktag linktag--third" />
+        </a>
+        <a href="./ranking.html">
+            <img src="./images/0_src/nice_btn-tag.gif" alt="おすすめの駄菓子" class="linktag linktag--fourth" />
+        </a>
+        <a href="./memory.html">
+            <img src="./images/0_src/memory_btn-tag.gif" alt="思い出・感想" class="linktag linktag--fifth" />
+        </a>
+    </div>
     <script type="module" src="./main.js"></script>
-    <script src="./menu.js"></script>
+    <script type="module" src="./menu.js"></script>
 
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
 

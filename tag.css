@@ -1,4 +1,4 @@
-.info-space__logo {
+.info-space__logo, .top-space__logo {
   display: none;
   width: -webkit-fit-content;
   width: -moz-fit-content;
@@ -9,11 +9,11 @@
 }
 
 @media (850px <= width) {
-  .info-space__logo {
+  .info-space__logo,.top-space__logo {
     display: block;
   }
 }
-.info-space__logo img {
+.info-space__logo, .top-space__logo img {
   width: 150px;
   display: block;
   margin-top: 20px;

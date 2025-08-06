@@ -86,7 +86,7 @@ window.addEventListener("load", () => {
           ease: "power2.out"
         });
         gsap.set(activitySection, { visibility: "hidden" });
-        gsap.set(nav, { display: "none" });
+        // gsap.set(nav, { display: "none" });
       }
     },
 
@@ -120,7 +120,7 @@ window.addEventListener("load", () => {
             visibility: "visible"
           });
 
-            gsap.set(nav, { display: "block" });
+            // gsap.set(nav, { display: "block" });
 
           // Smooth entrance of remaining sections with stagger
           gsap.to(remainingSections, {

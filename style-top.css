@@ -9,7 +9,7 @@ body {
     font-size: 15px;
     line-height: 1.5;
     letter-spacing: 0.002em;
-    overflow-x: hidden;
+    background-color: #f6edde;
 
     overflow-x: hidden;
     -webkit-font-smoothing: antialiased;
@@ -38,6 +38,8 @@ img {
 
     position: relative;
     min-height: 100vh;
+
+    z-index: 999;
 }
 
 .top,
@@ -135,6 +137,10 @@ img {
 
     margin-left: 60px;
     ;
+}
+
+.wrapper{
+    background-color: #fff;
 }
 
 .activity {
@@ -463,6 +469,10 @@ img {
     flex-direction: row-reverse;
 }
 
+.member__pic img{
+    margin-top: -55px;
+}
+
 .card {
     padding: 5px 0;
 }
@@ -605,15 +615,8 @@ img {
 
 .footer {
     padding: 25px 80px;
+    background: #EAEAEA;
 }
-
-.footer__inner {
-    width: 90%;
-    max-width: 390px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
 .footer__text {
     font-size: 22px;
     font-weight: normal;

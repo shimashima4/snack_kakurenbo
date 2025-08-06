@@ -3,7 +3,6 @@ body {
 }
 
 .nav {
-  display: block;
   position: fixed;
   bottom: 3vh;
   transform: translateX(10%);
@@ -67,5 +66,11 @@ body {
 .nav__ul li:hover::after {
   width: 100%;
   transition: 0.3s all ease;
+}
+
+@media (850px <= width) {
+  .nav {
+    display: none;
+  }
 }
 /*# sourceMappingURL=menustyle.css.map */

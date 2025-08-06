@@ -78,3 +78,9 @@ body {
     transition: 0.3s all ease;
   }
 }
+
+@media (850px <=width) {
+  .nav {
+    display: none;
+  }
+}
