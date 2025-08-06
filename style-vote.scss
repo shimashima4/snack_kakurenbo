@@ -1,35 +1,34 @@
-@charset 'utf-8';
-$breakpoints: (
-  "mobile": "(320px >= width)"
-) !default;
-
-@mixin m-query($breakpoint) {
-  @media #{map-get($breakpoints, $breakpoint)} {
-    @content;
-  }
-}
-
 body {
   background-color: #f6edde;
 }
 
-.header {
-  display: block;
-  position: fixed;
-  z-index: 50;
-  width: 150px;
-  margin: 20px 0 0 20px;
+.dagashiPage {
+  position: relative;
+  z-index: 80;
 }
+
+/* .header__wrap {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+} */
+/* @media (813px <= width) {
+  .header__wrap {
+    /* right: calc(50vw - 400px); */
+/*
+  }
+} */
 
 .dagashiPage {
   display: block;
-  max-width: 400px;
+  /* max-width: 400px; */
   margin: 0 auto;
-  background-color: white;
-  &__head img {
-    width: 100%;
-    object-fit: cover;
-  }
+  background-color: rgb(249, 246, 242);
+}
+.dagashiPage__head img {
+  width: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
 }
 
 .snackList {
@@ -37,34 +36,34 @@ body {
   flex-direction: column;
   gap: 80px;
   padding-top: 100px;
-  &__row {
-    border-bottom: 30px #99725c solid;
-  }
-  &__inner {
-    margin: 0 auto;
-    width: 90%;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: flex-end;
-    justify-content: space-between;
-  }
+}
+.snackList__row {
+  border-bottom: 30px #99725c solid;
+}
+.snackList__inner {
+  margin: 0 auto;
+  width: 90%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  justify-content: space-between;
 }
 
 .onSnack {
   position: relative;
   text-align: center;
   width: 20%;
-  & p {
-    position: absolute;
-    text-align: center;
-    width: 100%;
-    padding: 12px;
-    background-color: #e6ded6;
-    font-weight: bold;
-  }
-  & img {
-    vertical-align: bottom;
-  }
+}
+.onSnack p {
+  position: absolute;
+  text-align: center;
+  width: 100%;
+  padding: 12px;
+  background-color: #e6ded6;
+  font-weight: bold;
+}
+.onSnack img {
+  vertical-align: bottom;
 }
 
 .ranking {
@@ -79,27 +78,27 @@ body {
     right 50%;
   background-size: 70%;
   background-repeat: no-repeat;
-
-  &::after {
-    content: "";
-    display: block;
-    position: absolute;
-    top: -48px;
-    transform: scale(-100%);
-    left: center;
-    max-width: 400px;
-    background: url(./images/0_src/gizagiza.png);
-  }
-
-  &__title {
-    width: 100%;
-    width: 60%;
-    margin: 0 auto;
-    margin-bottom: 30px;
-    @include m-query(mobile) {
-      top: 0;
-      margin-bottom: -20px;
-    }
+}
+.ranking::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: -48px;
+  transform: scale(-100%);
+  left: center;
+  max-width: 400px;
+  background: url(./images/0_src/gizagiza.png);
+}
+.ranking__title {
+  width: 100%;
+  width: 60%;
+  margin: 0 auto;
+  margin-bottom: 30px;
+}
+@media (320px >= width) {
+  .ranking__title {
+    top: 0;
+    margin-bottom: -20px;
   }
 }
 
@@ -108,7 +107,7 @@ body {
   flex-wrap: wrap;
   justify-content: space-around;
   font-family: "Dela Gothic One", sans-serif;
-  font-size: (16em/16);
+  font-size: 1em;
 }
 
 .topThreeBar {
@@ -120,51 +119,98 @@ body {
   height: 380px;
   max-height: 380px;
   text-align: center;
-
-  & p {
-    width: 100%;
-    text-align: center;
-    color: white;
-    padding-top: 10px;
-  }
-  & img {
-    display: block;
-    width: 60%;
-    margin: 0 auto;
-    margin-top: auto;
-  }
-  &--second p {
-    height: 85px;
-    background-color: #989898;
-  }
-  &--first p {
-    height: 136px;
-    background-color: #f2c246;
-  }
-  &--third p {
-    height: 55px;
-    background-color: #916a64;
-  }
+}
+.topThreeBar p {
+  width: 100%;
+  text-align: center;
+  color: white;
+  padding-top: 10px;
+}
+.topThreeBar img {
+  display: block;
+  width: 60%;
+  margin: 0 auto;
+  margin-top: auto;
+}
+.topThreeBar--second p {
+  height: 85px;
+  background-color: #989898;
+}
+.topThreeBar--first p {
+  height: 136px;
+  background-color: #f2c246;
+}
+.topThreeBar--third p {
+  height: 55px;
+  background-color: #916a64;
 }
 
 .vote {
   padding-bottom: 130px;
-  &__title {
-    margin: 105px auto 0;
-    max-width: 350px;
-  }
-  &__button {
-    display: block;
-    padding: 10px 50px;
-    border: 3px #6c6c6c solid;
-    font-size: (22em/16);
-    margin: 35px auto 0;
-    font-weight: bold;
-    text-align: center;
-  }
+}
+.vote__title {
+  margin: 105px auto 0;
+  max-width: 350px;
+}
+.vote__box {
+  display: block;
+  margin: 30px auto 0;
+}
+.vote__button {
+  display: block;
+  padding: 10px 50px;
+  border: 3px #6c6c6c solid;
+  font-size: 1.375em;
+  margin: 35px auto 0;
+  font-weight: bold;
+  text-align: center;
 }
 
 .voteBox {
   display: block;
   margin: 58px auto 0;
+}
+/*# sourceMappingURL=style-vote.css.map */
+
+.memory {
+  background-color: white;
+  text-align: center;
+}
+
+.omoide-body {
+  position: relative;
+  z-index: 100;
+}
+
+.omoide-body__paragraph {
+  margin-top: 60px;
+}
+
+.memoryCorner {
+  padding-bottom: 200px;
+}
+
+.memoryCorner h2 {
+  margin-top: 60px;
+  margin-bottom: 20px;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.ranking::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: -48px;
+  transform: scale(-100%);
+  left: center;
+  max-width: 400px;
+  z-index: 0;
+  background: url(./images/0_src/gizagiza.png);
+}
+
+.heart {
+  display: block;
+  margin: 80px auto 0;
+  /* margin-top: 30px; */
 }
