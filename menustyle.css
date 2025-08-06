@@ -14,6 +14,8 @@ body {
   border: 3px solid black;
   border-radius: 20px;
   transition: all 0.3s ease;
+  transform: translateX(5%);
+  background-color: white;
 }
 .nav__inner {
   display: grid;
@@ -48,7 +50,8 @@ body {
   background-color: white;
 }
 .nav--info, .nav--top {
-  transform: translateX(2%);
+  transform: translateX(5%);
+  background-color: white;
 }
 .nav--info__menu a, .nav--top__menu a {
   background: url(./images/0_src/kinako_bo.png) 20% center no-repeat;
@@ -67,5 +70,11 @@ body {
 .nav__ul li:hover::after {
   width: 100%;
   transition: 0.3s all ease;
+}
+
+@media (850px <= width) {
+  .nav {
+    display: none;
+  }
 }
 /*# sourceMappingURL=menustyle.css.map */

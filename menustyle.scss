@@ -3,6 +3,7 @@ body {
 }
 
 .nav {
+  display: block;
   position: fixed;
   bottom: 3vh;
   transform: translateX(10%);
@@ -15,6 +16,8 @@ body {
   border: 3px solid black;
   border-radius: 20px;
   transition: all 0.3s ease;
+  transform: translateX(5%);
+  background-color: white;
 
   &__inner {
     display: grid;
@@ -54,7 +57,8 @@ body {
 
   &--info,
   &--top {
-    transform: translateX(2%);
+    transform: translateX(5%);
+    background-color: white;
 
     &__menu a {
       background: url(./images/0_src/kinako_bo.png) 20% center no-repeat;
@@ -76,5 +80,11 @@ body {
   &::after {
     width: 100%;
     transition: 0.3s all ease;
+  }
+}
+
+@media (850px <= width) {
+  .nav {
+    display: none;
   }
 }

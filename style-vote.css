@@ -18,13 +18,13 @@ body {
 /*
   }
 } */
-
 .dagashiPage {
   display: block;
   /* max-width: 400px; */
   margin: 0 auto;
   background-color: rgb(249, 246, 242);
 }
+
 .dagashiPage__head img {
   width: 100%;
   -o-object-fit: cover;
@@ -37,9 +37,11 @@ body {
   gap: 80px;
   padding-top: 100px;
 }
+
 .snackList__row {
   border-bottom: 30px #99725c solid;
 }
+
 .snackList__inner {
   margin: 0 auto;
   width: 90%;
@@ -54,6 +56,7 @@ body {
   text-align: center;
   width: 20%;
 }
+
 .onSnack p {
   position: absolute;
   text-align: center;
@@ -62,6 +65,7 @@ body {
   background-color: #e6ded6;
   font-weight: bold;
 }
+
 .onSnack img {
   vertical-align: bottom;
 }
@@ -72,12 +76,12 @@ body {
   margin-top: 195px;
   padding-top: 20%;
   padding-bottom: 95px;
-  background-image: url("./images/0_src/light_left.png"),
-    url("./images/0_src/light_right.png");
+  background-image: url("./images/0_src/light_left.png"), url("./images/0_src/light_right.png");
   background-position: left 50%, right 50%;
   background-size: 70%;
   background-repeat: no-repeat;
 }
+
 .ranking::after {
   content: "";
   display: block;
@@ -88,19 +92,20 @@ body {
   max-width: 400px;
   background: url(./images/0_src/gizagiza.png);
 }
+
 .ranking__title {
   width: 100%;
   width: 60%;
   margin: 0 auto;
   margin-bottom: 30px;
 }
+
 @media (320px >= width) {
   .ranking__title {
     top: 0;
     margin-bottom: -20px;
   }
 }
-
 .topThree {
   display: flex;
   flex-wrap: wrap;
@@ -119,26 +124,31 @@ body {
   max-height: 380px;
   text-align: center;
 }
+
 .topThreeBar p {
   width: 100%;
   text-align: center;
   color: white;
   padding-top: 10px;
 }
+
 .topThreeBar img {
   display: block;
   width: 60%;
   margin: 0 auto;
   margin-top: auto;
 }
+
 .topThreeBar--second p {
   height: 85px;
   background-color: #989898;
 }
+
 .topThreeBar--first p {
   height: 136px;
   background-color: #f2c246;
 }
+
 .topThreeBar--third p {
   height: 55px;
   background-color: #916a64;
@@ -147,14 +157,17 @@ body {
 .vote {
   padding-bottom: 130px;
 }
+
 .vote__title {
   margin: 105px auto 0;
   max-width: 350px;
 }
+
 .vote__box {
   display: block;
   margin: 30px auto 0;
 }
+
 .vote__button {
   display: block;
   padding: 10px 50px;
@@ -169,8 +182,6 @@ body {
   display: block;
   margin: 58px auto 0;
 }
-/*# sourceMappingURL=style-vote.css.map */
-
 .memory {
   background-color: white;
   text-align: center;
@@ -213,3 +224,4 @@ body {
   margin: 80px auto 0;
   /* margin-top: 30px; */
 }
+/*# sourceMappingURL=style-vote.css.map */
