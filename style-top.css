@@ -42,31 +42,7 @@ img {
     z-index: 999;
 }
 
-.top,
-.activity,
-.shop__image,
-.about,
-.thought,
-.member,
-.access {
-    backface-visibility: hidden;
-    perspective: 1000px;
-}
 
-/* .shop__image,
-.about,
-.thought,
-.member,
-.access {
-    opacity: 0;
-    visibility: hidden;
-    transform: translateY(50px) translateZ(0);
-    will-change: opacity, transform, visibility;
-    backface-visibility: hidden;
-} */
-
-/* .header{
-} */
 
 .top {
     display: block;
@@ -151,35 +127,8 @@ img {
     width: 100%;
     min-height: 100vh;
     text-align: center;
-    /* opacity: 0;
-    visibility: hidden;
-    transform: scale(0.5);
-    transform-origin: center center;
-    pointer-events: none; */
-
-    /* will-change: transform, opacity;
-    transform: translateZ(0);
-    backface-visibility: hidden;
-    transition: none !important; */
 }
 
-/* .activity.visible {
-    opacity: 1 !important;
-    visibility: visible !important;
-    transform: scale(1) !important;
-    pointer-events: auto !important;
-} */
-
-/* .activity.positioned {
-    position: relative !important;
-    top: auto !important;
-    left: auto !important;
-    transform: none !important;
-    opacity: 1 !important;
-    visibility: visible !important;
-    pointer-events: auto !important;
-    z-index: auto !important;
-} */
 
 .activity__inner {
     width: 90%;
@@ -415,11 +364,6 @@ img {
 .thought__phrase:last-child {
     padding-bottom: 300px;
 }
-
-/* .member {
-    position: relative;
-    z-index: 5;
-} */
 
 .member__inner {
     width: 90%;
