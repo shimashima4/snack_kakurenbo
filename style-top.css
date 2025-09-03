@@ -53,7 +53,7 @@ img {
     perspective: 1000px;
 }
 
-.shop__image,
+/* .shop__image,
 .about,
 .thought,
 .member,
@@ -63,7 +63,7 @@ img {
     transform: translateY(50px) translateZ(0);
     will-change: opacity, transform, visibility;
     backface-visibility: hidden;
-}
+} */
 
 /* .header{
 } */
@@ -140,6 +140,7 @@ img {
 }
 
 .wrapper{
+    margin-top: -422px;
     background-color: #fff;
 }
 
@@ -150,26 +151,26 @@ img {
     width: 100%;
     min-height: 100vh;
     text-align: center;
-    opacity: 0;
+    /* opacity: 0;
     visibility: hidden;
     transform: scale(0.5);
     transform-origin: center center;
-    pointer-events: none;
+    pointer-events: none; */
 
-    will-change: transform, opacity;
+    /* will-change: transform, opacity;
     transform: translateZ(0);
     backface-visibility: hidden;
-    transition: none !important;
+    transition: none !important; */
 }
 
-.activity.visible {
+/* .activity.visible {
     opacity: 1 !important;
     visibility: visible !important;
     transform: scale(1) !important;
     pointer-events: auto !important;
-}
+} */
 
-.activity.positioned {
+/* .activity.positioned {
     position: relative !important;
     top: auto !important;
     left: auto !important;
@@ -178,7 +179,7 @@ img {
     visibility: visible !important;
     pointer-events: auto !important;
     z-index: auto !important;
-}
+} */
 
 .activity__inner {
     width: 90%;
@@ -312,7 +313,7 @@ img {
 }
 
 .about {
-    position: relative;
+    /* position: relative; */
     z-index: 3;
     padding: 150px 0 240px;
 
@@ -370,8 +371,8 @@ img {
 }
 
 .thought {
-    position: relative;
-    z-index: 4;
+    /* position: relative;
+    z-index: 4; */
     background: url(./images/0_src/feeling_bg.png) no-repeat center center/ cover;
 }
 
@@ -415,10 +416,10 @@ img {
     padding-bottom: 300px;
 }
 
-.member {
+/* .member {
     position: relative;
     z-index: 5;
-}
+} */
 
 .member__inner {
     width: 90%;
